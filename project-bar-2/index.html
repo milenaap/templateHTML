@@ -3,31 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebSite</title>
+    <title>La Retation – Coffee & Bistro</title>
 
-    <!-- CSS compile style.scss -->
+    <!-- CSS compilado desde style.scss -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <main>
-        
-      <!-- Screen load -->
+      <!-- Pantalla de carga -->
       <div id="preloader">
         <div class="loader"></div>
       </div>
 
-
-      <!-- Main Content -->
+      <!-- Contenido principal -->
       <div id="content" hidden>
-        <h1>Bienvenido a la página</h1>
-        <p>Este es el contenido principal.</p>
+        <!-- Header -->
+        <header>
+          <div class="container">
+            <img src="img/logo.png" alt="Logo" class="logo" />
+            <nav>
+              <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero" id="inicio">
+          <div class="hero-text">
+            <h1>Bienvenidos a La Retation</h1>
+            <p>Un rincón de sabor y calidez</p>
+          </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section class="section" id="nosotros">
+          <div class="container">
+            <h2>Nuestra Historia</h2>
+            <p>
+              Desde 2010, ofrecemos un espacio acogedor donde disfrutar del mejor
+              café artesanal y platos inspirados en la cocina mediterránea.
+            </p>
+          </div>
+        </section>
+
+        <!-- Menú -->
+        <section class="section light" id="menu">
+          <div class="container">
+            <h2>Menú</h2>
+            <ul class="menu-list">
+              <li><strong>Café Latte</strong> – €2.50</li>
+              <li><strong>Capuccino</strong> – €2.80</li>
+              <li><strong>Tarta casera del día</strong> – €3.50</li>
+              <li><strong>Ensalada gourmet</strong> – €6.90</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="section" id="contacto">
+          <div class="container">
+            <h2>Contáctanos</h2>
+            <p>📍 Calle del Café, 123 – Barcelona</p>
+            <p>📞 +34 600 123 456</p>
+            <p>✉️ contacto@laretation.com</p>
+          </div>
+        </section>
+
+        <footer>
+          <p>&copy; 2025 La Retation Coffee & Bistro. Todos los derechos reservados.</p>
+        </footer>
       </div>
     </main>
 
-    <!-- scripts -->
+    <!-- JS -->
     <script src="js/script.js"></script>
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
   </body>
 </html>

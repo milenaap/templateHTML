@@ -1,16 +1,33 @@
 @charset "UTF-8";
-/* Fuente y variables */
+/* --------------------------
+   Fuente y Variables
+---------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 :root {
   --brand: #F8B78B;
+  --dark: #1e1e1e;
+  --light: #fafafa;
+  --text: #333;
+  --white: #ffffff;
+  --accent: #a79c86;
 }
 
-/* Reset mínimo */
-html, body, * {
+/* --------------------------
+   Reset Básico
+---------------------------*/
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
   font-family: "Ubuntu", sans-serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 /* --------------------------
@@ -23,7 +40,6 @@ html, body, * {
   display: grid;
   place-items: center;
   z-index: 9999;
-  /* transición suave al esconderse */
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
@@ -32,7 +48,6 @@ html, body, * {
   visibility: hidden;
 }
 
-/* Animación del spinner */
 .loader {
   width: 64px;
   height: 64px;
@@ -48,9 +63,116 @@ html, body, * {
   }
 }
 /* --------------------------
-   Contenido principal
+   Layout General
 ---------------------------*/
-#content {
-  padding: 2rem;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* --------------------------
+   Header
+---------------------------*/
+header {
+  background-color: var(--dark);
+  padding: 1rem 0;
+  color: var(--white);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  max-height: 50px;
+}
+header .container nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+header .container nav ul a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+header .container nav ul a:hover {
+  color: var(--brand);
+}
+
+/* --------------------------
+   Hero
+---------------------------*/
+.hero {
+  background: url("../img/hero.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+.hero .hero-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero .hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+}
+.hero .hero-text p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* --------------------------
+   Secciones
+---------------------------*/
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+.section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+.section.light {
+  background-color: var(--white);
+}
+
+/* --------------------------
+   Menú
+---------------------------*/
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.menu-list li {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+.menu-list li strong {
+  font-weight: bold;
+}
+
+/* --------------------------
+   Footer
+---------------------------*/
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */
