@@ -3,9 +3,10 @@
    FUENTE + VARIABLES CSS
 ------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import 'node_modules/animate.css/animate.css';
 /*  • Variables de CSS nativo  */
 :root {
-  --brand: #f98282; /* Se usa en el spinner                 */
+  --brand: #F8B78B; /* Se usa en el spinner                 */
 }
 
 /*  • Variables Sass (colores del banner)  */
@@ -18,9 +19,7 @@ html, body, * {
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
-  background-color: #000;
-
-} 
+}
 
 /* ------------------------------
    PRELOADER
@@ -28,7 +27,7 @@ html, body, * {
 #preloader {
   position: fixed;
   inset: 0;
-  background: #000; 
+  background: #ffffff;
   display: grid;
   place-items: center;
   z-index: 9999;
