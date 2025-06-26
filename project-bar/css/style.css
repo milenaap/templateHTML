@@ -86,17 +86,19 @@ html, body, * {
 .banner .brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 3.5rem;
 }
 .banner .brand__icon {
-  width: 48px;
+  width: 150px;
+  height: auto;
 }
 .banner .brand__text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .banner__title {
-  font-family: Georgia, serif;
+  font-family: "Changa", sans-serif;
   font-size: clamp(2.75rem, 6vw, 4.5rem);
   margin-bottom: 1.5rem;
 }

@@ -84,18 +84,25 @@ html, body, * {
 
   /* Branding */
   .brand {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    margin-bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;              // un poco más de aire
+  margin-bottom: 3.5rem;
 
-    &__icon { width: 48px; }
-    &__text { font-size: 1.25rem; }
+  &__icon {
+    width: 150px;         // ⬅️ prueba 110 px, ajusta a gusto
+    height: auto;         // mantiene proporción
   }
+
+  &__text {
+    font-size: 1.5rem;    // el claim también crece un poco
+    font-weight: 500;
+  }
+}
 
   /* Título */
   &__title {
-    font-family: Georgia, serif;
+    font-family: 'Changa', sans-serif;
     font-size: clamp(2.75rem, 6vw, 4.5rem);
     margin-bottom: 1.5rem;
   }
