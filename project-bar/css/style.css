@@ -1,15 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@charset "UTF-8";
+/* ------------------------------
+   FUENTE + VARIABLES CSS
+------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+/*  • Variables de CSS nativo  */
 :root {
-  --color1: #F8B78B;
+  --brand: #F8B78B; /* Se usa en el spinner                 */
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
+/*  • Variables Sass (colores del banner)  */
+/* Barra decorativa bajo el título       */
+/* ------------------------------
+   RESET MÍNIMO
+------------------------------*/
+html, body, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+}
+
+/* ------------------------------
+   PRELOADER
+------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+#preloader .loader {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid var(--brand);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ------------------------------
+   CONTENIDO PRINCIPAL
+------------------------------*/
+#content {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ------------------------------
+   BANNER
+------------------------------*/
+.banner {
+  display: flex;
+  gap: 3rem;
+  padding: 2.5rem;
+  overflow: hidden;
+  background-color: #0e1312;
+  color: #ffffff;
+  /* ─ Columna Izquierda ─ */
+  /* Branding */
+  /* Título */
+  /* Barra decorativa */
+  /* Dirección */
+  /* ─ Columna Derecha ─ */
+}
+.banner__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+}
+.banner .brand__icon {
+  width: 48px;
+}
+.banner .brand__text {
+  font-size: 1.25rem;
+}
+.banner__title {
+  font-family: Georgia, serif;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  margin-bottom: 1.5rem;
+}
+.banner__bar {
+  width: 240px;
+  height: 50px;
+  border-radius: 25px;
+  background: #a79c86;
+  margin-bottom: 3.5rem;
+}
+.banner .address {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+}
+.banner .address__icon {
+  width: 26px;
+}
+.banner__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  align-items: center;
+  transform: rotate(10deg);
+}
+
+/* Platos individuales */
+.dish {
+  width: min(260px, 45%);
+  border-radius: 14px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: rotate(-10deg);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------*/
+@media (max-width: 860px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner__right {
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .banner .dish {
+    transform: none;
+  }
 }/*# sourceMappingURL=style.css.map */

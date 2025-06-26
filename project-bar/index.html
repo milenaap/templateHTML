@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSite</title>
 
-    <main></main>
-    
+    <!-- CSS resultante de compilar style.scss -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
-</body>
+  <body>
+    <main>
+      <!-- Pantalla de carga -->
+      <div id="preloader">
+        <div class="loader"></div>
+      </div>
+
+      <!-- Contenido principal (se oculta hasta que el loader termine) -->
+      <div id="content" hidden>
+        <!-- ▸▸  Banner  ◂◂ -->
+        <section class="banner">
+          <!-- Columna izquierda -->
+          <div class="banner__left">
+            <div class="brand">
+              <img src="img/logo.png" alt="Logo La Meva Llar" class="brand__icon" />
+              <span class="brand__text">Tapas – Restaurant</span>
+            </div>
+
+            <h1 class="banner__title">La Meva Llar</h1>
+            <div class="banner__bar"></div>
+
+            <div class="address">
+              <img src="img/icon.svg" alt="" class="address__icon" aria-hidden="true" />
+              <span>Calle Buenos Aires 12, 08029</span>
+            </div>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="banner__right">
+            <img src="img/dish-1.jpg" alt="Bruschettas" class="dish" />
+            <img src="img/dish-2.jpg" alt="Timbal de jamón" class="dish" />
+            <img src="img/dish-3.jpg" alt="Ensalada de salmón" class="dish" />
+          </div>
+        </section>
+
+        <!-- Puedes mantener el resto de tu página debajo del banner -->
+        <h1>Bienvenido a la página</h1>
+        <p>Este es el contenido principal.</p>
+      </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
