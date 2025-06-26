@@ -1,8 +1,8 @@
+@charset "UTF-8";
 /* Fuente y variables */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 :root {
-  --brand: #F8B78B;      // Color corporativo (lo usaré en el loader)
+  --brand: #F8B78B;
 }
 
 /* Reset mínimo */
@@ -10,7 +10,7 @@ html, body, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* --------------------------
@@ -24,7 +24,7 @@ html, body, * {
   place-items: center;
   z-index: 9999;
   /* transición suave al esconderse */
-  transition: opacity .4s ease, visibility .4s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 #preloader.hidden {
@@ -43,15 +43,14 @@ html, body, * {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 /* --------------------------
    Contenido principal
 ---------------------------*/
 #content {
   padding: 2rem;
   text-align: center;
-}
-
-
+}/*# sourceMappingURL=style.css.map */
