@@ -107,7 +107,7 @@ header .container nav ul a:hover {
 ---------------------------*/
 .hero {
   background: url("../img/hero.jpg") center/cover no-repeat;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
