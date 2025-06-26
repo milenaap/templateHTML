@@ -81,7 +81,15 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: transparent;
+  
+  background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.95) 0%,     // negro fuerte al inicio
+  rgba(0, 0, 0, 0.7) 40%,     // sigue oscuro
+  rgba(0, 0, 0, 0.2) 80%,     // empieza a aclararse
+  rgba(0, 0, 0, 0) 100%       // totalmente transparente al final
+);
+
   color: var(--white);
   padding: 1rem 0;
 
