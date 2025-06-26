@@ -1,0 +1,113 @@
+/* =====  Variables de color  ===== */
+:root {
+  --bg-dark: #0e1312;
+  --text-light: #ffffff;
+  --accent-bar: #a79c86;
+}
+
+/*  Reset mínimo  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*  Body global  */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/*  Sección principal  */
+.banner {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* --- Columna izquierda --- */
+.banner__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*  Branding  */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.brand__icon {
+  width: 42px;
+}
+
+/*  Título principal  */
+.banner__title {
+  font-family: "Georgia", serif;
+  font-size: clamp(44px, 6vw, 72px);
+  margin-bottom: 30px;
+}
+
+/*  Barra decorativa  */
+.banner__bar {
+  width: 240px;
+  height: 52px;
+  border-radius: 26px;
+  background: var(--accent-bar);
+  margin-bottom: 70px;
+}
+
+/*  Dirección  */
+.address {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+}
+
+.address__icon {
+  width: 30px;
+}
+
+/* --- Columna derecha (platos) --- */
+.banner__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  /* Inclinamos todo el grupo */
+  transform: rotate(10deg);
+  align-items: center;
+}
+
+.dish {
+  width: min(260px, 45%);
+  border-radius: 14px;
+  object-fit: cover;
+  /* Contrarrestamos la rotación para que los platos se vean rectos */
+  transform: rotate(-10deg);
+}
+
+/* =====  Responsivo  ===== */
+@media (max-width: 860px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner__right {
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dish {
+    transform: none;
+  }
+}
