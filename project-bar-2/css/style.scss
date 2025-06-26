@@ -16,7 +16,7 @@
 /* --------------------------
    Reset Básico
 ---------------------------*/
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -113,7 +113,7 @@ header {
 ---------------------------*/
 .hero {
   background: url('../img/hero.jpg') center/cover no-repeat;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
