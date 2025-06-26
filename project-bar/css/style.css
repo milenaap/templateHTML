@@ -28,7 +28,7 @@ html, body, * {
 #preloader {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: #0e1312;
   display: grid;
   place-items: center;
   z-index: 9999;
@@ -82,6 +82,8 @@ html, body, * {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 1rem;
+  z-index: 1000;
 }
 .banner .brand {
   display: flex;
@@ -104,7 +106,7 @@ html, body, * {
 }
 .banner__bar {
   width: 240px;
-  height: 50px;
+  height: 10px;
   border-radius: 25px;
   background: #a79c86;
   margin-bottom: 3.5rem;
@@ -125,6 +127,8 @@ html, body, * {
   gap: 2.25rem;
   align-items: center;
   transform: rotate(10deg);
+  border-radius: 1rem;
+  background: linear-gradient(45deg, #000, #a79c86);
 }
 
 /* Platos individuales */
