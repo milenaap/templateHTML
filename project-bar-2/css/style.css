@@ -134,10 +134,8 @@ header .container nav ul a:hover::after {
   text-align: center;
 }
 .hero .hero-text {
-  background-color: rgba(0, 0, 0, 0.5);
   color: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 1rem;
 }
 .hero .hero-text h1 {
   font-family: "Playfair Display", serif;
