@@ -1,13 +1,13 @@
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
-  const content   = document.getElementById('content');
+  const content = document.getElementById('content');
 
-  // mostrar contenido
-  content.hidden = false;
+  // Esperar al menos 2 segundos antes de mostrar el contenido
+  setTimeout(() => {
+    content.hidden = false;
+    preloader.classList.add('hidden');
 
-  // iniciar desvanecimiento
-  preloader.classList.add('hidden');
-
-  // opcional: retirar el nodo del DOM cuando termine la transición
-  preloader.addEventListener('transitionend', () => preloader.remove());
+    // Eliminar el preloader del DOM después de la transición
+    preloader.addEventListener('transitionend', () => preloader.remove());
+  }, 1000); // Cambia 2000 por el tiempo en milisegundos que desees
 });
