@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="La Meva Llar - Restaurante mediterráneo en Barcelona con tapas, café artesanal y ambiente acogedor.">
+
     <title>La Meva Llar - Coffee & Bistro</title>
 
     <!-- CSS compilado desde style.scss -->
@@ -20,6 +22,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+
+    <!-- En el <head> -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
 
   </head>
@@ -60,7 +66,7 @@
         </section>
 
         <!-- Nosotros -->
-        <section class="section" id="nosotros">
+        <section class="section" id="nosotros" data-aos="fade-up">
           <div class="container">
             <h2>Nuestra Historia</h2>
             <p>
@@ -96,12 +102,18 @@
         </section>
 
         <footer>
-          <p>&copy; 2025 La Retation Coffee & Bistro. Todos los derechos reservados.</p>
+          <p>&copy; 2025 La Meva Llar Coffee & Bistro. Todos los derechos reservados.</p>
         </footer>
       </div>
     </main>
 
     <!-- JS -->
     <script src="js/script.js"></script>
+
+    <!-- AOS.js -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
