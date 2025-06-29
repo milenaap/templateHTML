@@ -100,7 +100,7 @@ header {
     
 
     .logo {
-      max-height: 150px;
+      max-height: 120px;
       filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6));
     }
 
@@ -147,9 +147,24 @@ header {
   background: url('../img/hero.jpg') center/cover no-repeat;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  .hero-imagen {
+    position: relative;
+    top: 5%;
+    z-index: 1;
+    max-width: 300px;
+    margin-bottom: 2rem;
+    
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
   .hero-text {
     //background-color: rgba(0, 0, 0, 0.5);

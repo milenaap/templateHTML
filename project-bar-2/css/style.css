@@ -90,7 +90,7 @@ header .container {
   align-items: center;
 }
 header .container .logo {
-  max-height: 150px;
+  max-height: 120px;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6));
 }
 header .container nav ul {
@@ -129,9 +129,21 @@ header .container nav ul a:hover::after {
   background: url("../img/hero.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.hero .hero-imagen {
+  position: relative;
+  top: 5%;
+  z-index: 1;
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+.hero .hero-imagen img {
+  width: 100%;
+  height: auto;
 }
 .hero .hero-text {
   color: var(--white);
