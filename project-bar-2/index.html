@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+  <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
 
+    
+
+
   <body>
     <main>
       <!-- Pantalla de carga -->
@@ -24,7 +30,7 @@
       </div>
 
       <!-- Contenido principal -->
-      <div id="content" hidden>
+      <div id="content">
         <!-- Header -->
         <header>
           <div class="container">
@@ -58,37 +64,54 @@
           </div>
         </section>
 
-        <!-- Nosotros -->
+        <!-- Nosotros --> 
         <section class="section" id="nosotros">
           <div class="container">
             <!-- Fila 1 -->
             <div class="about-row">
-              <div class="about-text">
+              <div class="about-text"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out">
                 <h2 data-i18n="about_title1">Sabores que nos definen</h2>
                 <p data-i18n="about_txt1">
                   En <strong>La Meva Llar</strong> celebramos la esencia de la cocina mediterránea
                   con recetas de toda la vida, elaboradas con productos frescos y locales.
                 </p>
               </div>
-              <div class="about-img">
+              <div class="about-img"
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out">
                 <img src="img/plato1.jpg" alt="Plato mediterráneo" />
               </div>
             </div>
 
             <!-- Fila 2 (zigzag) -->
             <div class="about-row reverse">
-              <div class="about-text">
+              <div class="about-text"
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out">
                 <h2 data-i18n="about_title2">Un lugar para compartir</h2>
                 <p data-i18n="about_txt2">
                   Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato.
                 </p>
               </div>
-              <div class="about-img">
+              <div class="about-img"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out">
                 <img src="img/restaurante.jpg" alt="Interior del restaurante" />
               </div>
             </div>
           </div>
         </section>
+
 
         <!-- Menú -->
         <section class="section light" id="menu">
@@ -123,5 +146,11 @@
     <!-- JS -->
     <script src="js/lang.js" type="module"></script>
     <script src="js/script.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
