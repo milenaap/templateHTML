@@ -51,5 +51,6 @@ html, body, * {
    Contenido principal
 ---------------------------*/
 #content {
+  /*padding: 2rem;*/
   text-align: center;
 }/*# sourceMappingURL=style.css.map */

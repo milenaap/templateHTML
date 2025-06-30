@@ -16,3 +16,14 @@ window.addEventListener('load', () => {
     preloader.addEventListener('transitionend', () => preloader.remove());
   }, 1000); // Cambia 1000 por el tiempo en milisegundos que desees
 });
+
+for (const sheet of document.styleSheets) {
+  try {
+    const rules = sheet.cssRules;
+    // Solo si se accede correctamente
+    // Haz algo con las rules
+  } catch (e) {
+    // Hoja inaccesible (por CORS)
+    console.warn('No se pudo acceder a', sheet.href);
+  }
+}
