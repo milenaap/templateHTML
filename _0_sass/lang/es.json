@@ -1,46 +1,45 @@
 {
   "logo_alt": "La Meva Llar",
-
+  "home": {
+    "title": "Página de Bienvenida"
+  },
   
-  "nav_home": "Inicio",
-  "nav_about": "Nosotros",
-  "nav_menu": "Menú",
-  "nav_contact": "Contacto",
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "menu": "Menú",
+    "contact": "Contacto"
+  },
 
+  "hero": {
+    "title": "Bienvenidos a La Meva Llar",
+    "sub": "Un rincón acogedor de sabor y calidez"
+  },
   
-  "hero_title": "Bienvenidos a La Meva Llar",
-  "hero_sub": "Tapas - Restaurante con esencia mediterránea",
+  "about": {
+    "title1": "Sabores que nos definen",
+    "txt1": "En La Meva Llar celebramos la esencia de la cocina mediterránea con recetas de toda la vida elaboradas con ingredientes frescos y locales.",
+    "title2": "Un lugar para compartir",
+    "txt2": "Nuestro espacio está diseñado para reunir a las personas, disfrutar de buena comida, momentos especiales y el calor de hogar."
+  },
 
-  
-  "about_title1": "Sabores que nos definen",
-  "about_txt1": "En La Meva Llar celebramos la esencia de la cocina mediterránea con recetas de toda la vida, elaboradas con productos frescos y locales.",
+  "food_menu": {
+    "title": "Nuestra Carta",
+    "latte": "Café Latte – €2.50",
+    "capp": "Capuchino – €2.80",
+    "cake": "Tarta casera del día – €3.50",
+    "salad": "Ensalada gourmet – €6.90"
+  },
 
-  
-  "about_title2": "Un lugar para compartir",
-  "about_txt2": "Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato.",
+  "contact": {
+    "title": "Contáctanos",
+    "addr": "📍 C/ del Café, 123 – Barcelona",
+    "phone": "📞 +34 600 123 456",
+    "mail": "✉️ contacto@lamevallar.com"
+  },
 
-  
-  "menu_title": "Nuestra Carta",
-  "menu_latte": "Café Latte – €2.50",
-  "menu_capp":  "Capuccino – €2.80",
-  "menu_cake":  "Tarta casera del día – €3.50",
-  "menu_salad": "Ensalada gourmet – €6.90",
-
- 
-  "ubic_title": "Ubicación y Horarios",
-  "ubic_addr": "📍 Calle Buenos Aires, 12 – Barcelona",
-  "ubic_hours": "🕒 Lunes a Domingo: 9:00 - 23:00",
-  "ubic_phone": "📞 +34 600 123 456",
-  "ubic_note": "* Horarios especiales en festivos",
-
-  
-  "contact_title": "Contáctanos",
-  "contact_addr": "📍 C/ del Café, 123 – Barcelona",
-  "contact_phone": "📞 +34 600 123 456",
-  "contact_mail": "✉️ contacto@lamevallar.com",
-
-  
-  "footer_txt": "© 2025 La Retation Coffee & Bistro. Todos los derechos reservados.",
-  "footer_priv": "Política de Privacidad",
-  "footer_cookies": "Política de Cookies"
+  "footer": {
+    "priv": "Política de Privacidad",
+    "cookies": "Política de Cookies"
+  }
 }

@@ -42,4 +42,4 @@ setInterval(() => {
 
   applyRandomEffect(slides[currentSlide]);
   slides[currentSlide].classList.add('active');
-}, 3000);
+}, 10000);
