@@ -1,0 +1,25 @@
+{
+  "logo_alt": "La Meva Llar",
+  "nav_home": "Inicio",
+  "nav_about": "Nosotros",
+  "nav_menu": "Menú",
+  "nav_contact": "Contacto",
+  "hero_title": "Bienvenidos a La Meva Llar",
+  "hero_sub": "Un rincón de sabor y calidez",
+
+  "about_title1": "Sabores que nos definen",
+  "about_txt1": "En La Meva Llar celebramos la esencia mediterránea...",
+  "about_title2": "Un lugar para compartir",
+  "about_txt2": "Nuestro espacio está pensado para reunirse...",
+
+  "menu_title": "Nuestro Menú",
+  "menu_latte": "Café Latte – €2.50",
+  "menu_capp":  "Capuccino – €2.80",
+  "menu_cake":  "Tarta casera del día – €3.50",
+  "menu_salad": "Ensalada gourmet – €6.90",
+
+  "contact_title": "Contáctanos",
+  "contact_addr": "📍 C/ del Café, 123 – Barcelona",
+  "contact_phone": "📞 +34 600 123 456",
+  "contact_mail": "✉️ contacto@lamevallar.com"
+}

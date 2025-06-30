@@ -6,26 +6,14 @@
     <title>La Meva Llar - Coffee & Bistro</title>
 
     <!-- CSS compilado desde style.scss -->
-
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    
-
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
 
     <!-- Animate.css CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
 
   <body>
@@ -40,72 +28,77 @@
         <!-- Header -->
         <header>
           <div class="container">
-            <img src="img/logo.png" alt="Logo" class="logo" />
+            <img src="img/logo.png" class="logo" alt="La Meva Llar" data-i18n-attr="alt:logo_alt" />
+
             <nav>
               <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                <li><a href="#menu" data-i18n="nav_menu">Menú</a></li>
+                <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
               </ul>
             </nav>
+
+            <!-- Language switcher -->
+            <select id="langSwitch" aria-label="Idioma">
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+            </select>
           </div>
         </header>
 
         <!-- Hero -->
         <section class="hero" id="inicio">
           <div class="hero-imagen">
-            <img src="img/logo.png" alt="logo">
+            <img src="img/logo.png" alt="logo" />
           </div>
           <div class="hero-text animate__animated animate__fadeInUp">
-            <h1>Tapas - Restaurante</h1>
-            <p>Un rincón de sabor y calidez</p>
+            <h1 data-i18n="hero_title">Tapas - Restaurante</h1>
+            <p data-i18n="hero_sub">Un rincón de sabor y calidez</p>
           </div>
         </section>
 
+        <!-- Nosotros -->
         <section class="section" id="nosotros">
-        <div class="container">
-
-          <!-- Fila 1 -->
-          <div class="about-row">
-            <div class="about-text">
-              <h2>Sabores que nos definen</h2>
-              <p>
-                En <strong>La Meva Llar</strong> celebramos la esencia de la cocina mediterránea
-                con recetas de toda la vida, elaboradas con productos frescos y locales.
-              </p>
+          <div class="container">
+            <!-- Fila 1 -->
+            <div class="about-row">
+              <div class="about-text">
+                <h2 data-i18n="about_title1">Sabores que nos definen</h2>
+                <p data-i18n="about_txt1">
+                  En <strong>La Meva Llar</strong> celebramos la esencia de la cocina mediterránea
+                  con recetas de toda la vida, elaboradas con productos frescos y locales.
+                </p>
+              </div>
+              <div class="about-img">
+                <img src="img/plato1.jpg" alt="Plato mediterráneo" />
+              </div>
             </div>
-            <div class="about-img">
-              <img src="img/plato1.jpg" alt="Plato mediterráneo" />
+
+            <!-- Fila 2 (zigzag) -->
+            <div class="about-row reverse">
+              <div class="about-text">
+                <h2 data-i18n="about_title2">Un lugar para compartir</h2>
+                <p data-i18n="about_txt2">
+                  Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato.
+                </p>
+              </div>
+              <div class="about-img">
+                <img src="img/restaurante.jpg" alt="Interior del restaurante" />
+              </div>
             </div>
           </div>
-
-          <!-- Fila 2 (zigzag) -->
-          <div class="about-row reverse">
-            <div class="about-text">
-              <h2>Un lugar para compartir</h2>
-              <p>
-                Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato.
-              </p>
-            </div>
-            <div class="about-img">
-              <img src="img/restaurante.jpg" alt="Interior del restaurante" />
-            </div>
-          </div>
-
-        </div>
-      </section>
-
+        </section>
 
         <!-- Menú -->
         <section class="section light" id="menu">
           <div class="container">
-            <h2>Menú</h2>
+            <h2 data-i18n="menu_title">Menú</h2>
             <ul class="menu-list">
-              <li><strong>Café Latte</strong> – €2.50</li>
-              <li><strong>Capuccino</strong> – €2.80</li>
-              <li><strong>Tarta casera del día</strong> – €3.50</li>
-              <li><strong>Ensalada gourmet</strong> – €6.90</li>
+              <li data-i18n="menu_latte"><strong>Café Latte</strong> – €2.50</li>
+              <li data-i18n="menu_capp"><strong>Capuccino</strong> – €2.80</li>
+              <li data-i18n="menu_cake"><strong>Tarta casera del día</strong> – €3.50</li>
+              <li data-i18n="menu_salad"><strong>Ensalada gourmet</strong> – €6.90</li>
             </ul>
           </div>
         </section>
@@ -113,20 +106,22 @@
         <!-- Contacto -->
         <section class="section" id="contacto">
           <div class="container">
-            <h2>Contáctanos</h2>
-            <p>📍 Calle del Café, 123 – Barcelona</p>
-            <p>📞 +34 600 123 456</p>
-            <p>✉️ contacto@laretation.com</p>
+            <h2 data-i18n="contact_title">Contáctanos</h2>
+            <p data-i18n="contact_addr">📍 Calle del Café, 123 – Barcelona</p>
+            <p data-i18n="contact_phone">📞 +34 600 123 456</p>
+            <p data-i18n="contact_mail">✉️ contacto@laretation.com</p>
           </div>
         </section>
 
+        <!-- Footer -->
         <footer>
-          <p>&copy; 2025 La Retation Coffee & Bistro. Todos los derechos reservados.</p>
+          <p data-i18n="footer_txt">&copy; 2025 La Retation Coffee & Bistro. Todos los derechos reservados.</p>
         </footer>
       </div>
     </main>
 
     <!-- JS -->
+    <script src="js/lang.js" type="module"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

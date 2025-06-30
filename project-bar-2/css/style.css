@@ -228,4 +228,14 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
+}
+
+/* Selector para el switcher */
+#langSwitch {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--brand);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  font-family: inherit;
 }/*# sourceMappingURL=style.css.map */
