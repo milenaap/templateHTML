@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* Fuente y variables */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+:root {
+  --brand: #F8B78B;
+}
+
+/* Reset mínimo */
+html, body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* --------------------------
+   Preloader
+---------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  /* transición suave al esconderse */
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Animación del spinner */
+.loader {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid var(--brand);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* --------------------------
+   Contenido principal
+---------------------------*/
+#content {
+  /*padding: 2rem;*/
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
