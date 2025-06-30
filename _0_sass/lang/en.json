@@ -1,5 +1,10 @@
 {
   "logo_alt": "La Meva Llar",
+  
+  "select": {
+    "label": "Languaje:"
+  },
+
   "home": {
     "title": "Welcome Page"
   },

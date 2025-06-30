@@ -1,11 +1,12 @@
 @charset "UTF-8";
-/* Fuente y variables */
+/* style.scss */
+/* Fuentes y variables */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 :root {
   --brand: #F8B78B;
 }
 
-/* Reset mínimo */
+/* Reset */
 html, body, * {
   margin: 0;
   padding: 0;
@@ -13,26 +14,21 @@ html, body, * {
   font-family: "Ubuntu", sans-serif;
 }
 
-/* --------------------------
-   Preloader
----------------------------*/
+/* Preloader */
 #preloader {
   position: fixed;
   inset: 0;
-  background: #ffffff;
+  background: white;
   display: grid;
   place-items: center;
   z-index: 9999;
-  /* transición suave al esconderse */
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
-
 #preloader.hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-/* Animación del spinner */
 .loader {
   width: 64px;
   height: 64px;
@@ -47,10 +43,32 @@ html, body, * {
     transform: rotate(360deg);
   }
 }
-/* --------------------------
-   Contenido principal
----------------------------*/
+/* Contenido */
 #content {
-  /*padding: 2rem;*/
+  padding: 2rem;
   text-align: center;
+}
+
+/* Selector de idioma */
+.lang-switcher {
+  margin-bottom: 2rem;
+}
+.lang-switcher label {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.lang-switcher select {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+}
+
+/* Sección hero */
+.hero h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.hero p {
+  font-size: 1.25rem;
+  color: #666;
 }/*# sourceMappingURL=style.css.map */
