@@ -6,13 +6,17 @@
     <title>La Meva Llar - Coffee & Bistro</title>
 
     <!-- CSS compilado desde style.scss -->
+
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    
 
 
     <!-- Animate.css CDN -->
@@ -59,34 +63,39 @@
           </div>
         </section>
 
-        <!-- Nosotros -->
         <section class="section" id="nosotros">
-          <div class="container">
+        <div class="container">
 
-
-            <div class="container-about">
-              <!--Derecha-->
-              <div class="about-right">
-                <h1>Derecha</h1>
-              </div>
-
-              <!-- Izquierda -->
-              <div class="about-left">
-                <h1>Izquierda</h1>
-              </div>
-
+          <!-- Fila 1 -->
+          <div class="about-row">
+            <div class="about-text">
+              <h2>Sabores que nos definen</h2>
+              <p>
+                En <strong>La Meva Llar</strong> celebramos la esencia de la cocina mediterránea
+                con recetas de toda la vida, elaboradas con productos frescos y locales.
+              </p>
             </div>
-
-            
-            <h2>Nuestra Historia----</h2>
-            <p>
-              En <strong>La Meva Llar</strong> celebramos la esencia de la cocina mediterránea
-              con recetas de toda la vida, elaboradas con productos frescos y locales.
-              Nuestro restaurante es un espacio acogedor donde el sabor, la tradición y
-              la calidez del hogar se encuentran en cada plato.
-            </p>
+            <div class="about-img">
+              <img src="img/plato1.jpg" alt="Plato mediterráneo" />
+            </div>
           </div>
-        </section>
+
+          <!-- Fila 2 (zigzag) -->
+          <div class="about-row reverse">
+            <div class="about-text">
+              <h2>Un lugar para compartir</h2>
+              <p>
+                Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato.
+              </p>
+            </div>
+            <div class="about-img">
+              <img src="img/restaurante.jpg" alt="Interior del restaurante" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
 
         <!-- Menú -->
         <section class="section light" id="menu">
