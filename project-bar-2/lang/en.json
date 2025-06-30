@@ -21,5 +21,8 @@
   "contact_title": "Get in Touch",
   "contact_addr": "📍 C/ del Café, 123 – Barcelona",
   "contact_phone": "📞 +34 600 123 456",
-  "contact_mail": "✉️ contact@lamevallar.com"
+  "contact_mail": "✉️ contact@lamevallar.com",
+
+  "footer_priv": "Privacy Policy",
+  "footer_cookies": "Cookies Policy"
 }
