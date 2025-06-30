@@ -1,4 +1,4 @@
-/* ------------------------------
+ /* ------------------------------
    FUENTE + VARIABLES CSS
 ------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
@@ -18,12 +18,17 @@ $accent: #a79c86;             /* Barra decorativa bajo el título       */
 /* ------------------------------
    RESET MÍNIMO
 ------------------------------*/
-html, body, * {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
   background: #000;
+  height: 100%;
+}
+
+main {
+  height: 100%;
 }
 
 /* ------------------------------
@@ -32,36 +37,104 @@ html, body, * {
 #preloader {
   position: fixed;
   inset: 0;
-  background: $bg-dark;
-  display: grid;
-  place-items: center;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
-  transition: opacity .4s ease, visibility .4s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 
   &.hidden {
     opacity: 0;
     visibility: hidden;
   }
-
-  .loader {
-    width: 64px;
-    height: 64px;
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid var(--brand);  // color corporativo
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Loader SVG */
+.loader-svg {
+  width: 64px;
+  height: 64px;
+  color: var(--brand, #F8B78B);
+}
+
 
 /* ------------------------------
    CONTENIDO PRINCIPAL
 ------------------------------*/
 #content {
-  padding: 2rem;
+  //padding: 2rem;
   text-align: center;
 }
+
+
+
+
+
+
+
+/* ------------------------------
+   CARROUSEL
+------------------------------*/
+.carousel-fade {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: none;
+  z-index: 0;
+  transition: all 1.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Fade */
+.carousel-slide.fade {
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Zoom */
+.carousel-slide.zoom {
+  transform: scale(1.05);
+}
+
+/* Rotate */
+.carousel-slide.rotate {
+  transform: rotate(1deg) scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------
    BANNER
