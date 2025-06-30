@@ -17,6 +17,12 @@
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Swiper CSS -->
+   <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -118,23 +124,47 @@
 
         <!-- Menú -->
         <section class="section light" id="menu">
-          <div class="container">
-            <h2 data-i18n="menu_title">Menú</h2>
-            <ul class="menu-list">
-              <li data-i18n="menu_latte"><strong>Café Latte</strong> – €2.50</li>
-              <li data-i18n="menu_capp"><strong>Capuccino</strong> – €2.80</li>
-              <li data-i18n="menu_cake"><strong>Tarta casera del día</strong> – €3.50</li>
-              <li data-i18n="menu_salad"><strong>Ensalada gourmet</strong> – €6.90</li>
-            </ul>
+        <div class="container">
+          <h2 data-i18n="menu_title">Nuestra Carta</h2>
+
+        <!-- Swiper -->
+        <div class="swiper menuSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Página 1 -->
+            <div class="swiper-slide">
+              <img src="img/carta1.jpg" alt="Carta 1" />
+            </div>
+
+            <!-- Página 2 -->
+            <div class="swiper-slide">
+              <img src="img/carta2.jpg" alt="Carta 2" />
+            </div>
+
+            <!-- Página 3 -->
+            <div class="swiper-slide">
+              <img src="img/carta3.jpg" alt="Carta 3" />
+            </div>
+
           </div>
-        </section>
+
+          <!-- Flechas -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Paginación opcional -->
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+      </section>
+
 
         <!-- Ubicación y Horarios con Parallax -->
         <section class="parallax-ubicacion" id="ubicacion">
           <div class="overlay">
             <div class="container ubicacion-contenido">
               <h2 data-i18n="ubic_title">Ubicación y Horarios</h2>
-              <p data-i18n="ubic_addr">📍 Calle del Café, 123 – Barcelona</p>
+              <p data-i18n="ubic_addr">📍 Calle Buenos Aires, 12 – Barcelona</p>
               <p data-i18n="ubic_hours">🕒 Lunes a Domingo: 9:00 - 23:00</p>
               <p data-i18n="ubic_phone">📞 +34 600 123 456</p>
               <p data-i18n="ubic_note">* Horarios especiales en festivos</p>
@@ -157,5 +187,29 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Inicialización del carrusel -->
+    <script>
+      const swiper = new Swiper('.menuSwiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        grabCursor: true
+      });
+    </script>
+
+
   </body>
 </html>

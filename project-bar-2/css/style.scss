@@ -337,22 +337,85 @@ header {
 
 
 /* --------------------------
-   Menú
+   Sección - Menú (Swiper)
 ---------------------------*/
-.menu-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
+#menu {
+  padding: 4rem 0;
 
-  li {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Marcellus', serif;
+  }
 
-    strong {
-      font-weight: bold;
+  .menuSwiper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease;
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #F8B78B;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.3s ease;
+
+      &::after {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .swiper-pagination {
+      margin-top: 1rem;
+      text-align: center;
+
+      .swiper-pagination-bullet {
+        background: #F8B78B;
+        opacity: 1;
+
+        &-active {
+          background: #333;
+        }
+      }
     }
   }
 }
+
+
 
 .parallax-ubicacion {
   background: url('../img/ubicacion.jpg') center / cover fixed no-repeat;
