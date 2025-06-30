@@ -36,35 +36,53 @@ h1, h2, h3 {
 }
 
 /* --------------------------
-   Preloader
+   Preloader Moderno (Ripple)
 ---------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
-  background: #ffffff;
-  display: grid;
-  place-items: center;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 9999;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
-
 #preloader.hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-.loader {
-  width: 64px;
-  height: 64px;
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid var(--brand);
+.ripple-loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.ripple-loader div {
+  position: absolute;
+  border: 4px solid var(--brand);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.ripple-loader div:nth-child(2) {
+  animation-delay: -0.6s;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+@keyframes ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }
 /* --------------------------
@@ -82,49 +100,73 @@ h1, h2, h3 {
 header {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
-  color: var(--white);
-  padding: 1rem 0;
+  z-index: 10;
+  background: transparent;
 }
 header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
-header .container .logo {
-  max-height: 120px;
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.6));
-}
-header .container nav ul {
-  display: flex;
+header nav ul {
   list-style: none;
-  gap: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
-header .container nav ul a {
-  color: var(--white);
+header nav ul li a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+header select#langSwitch {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid #f8b78b;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+}
+header .logo {
+  width: 100px;
+}
+
+.parallax-hero {
   position: relative;
-  transition: color 0.3s ease;
+  background-image: url("../img/bg-hero.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
 }
-header .container nav ul a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background-color: var(--brand);
-  transition: width 0.3s ease;
+.parallax-hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
 }
-header .container nav ul a:hover {
-  color: var(--brand);
+.parallax-hero .overlay .hero-content {
+  color: white;
 }
-header .container nav ul a:hover::after {
-  width: 100%;
+.parallax-hero .overlay .hero-content img {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+.parallax-hero .overlay .hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.parallax-hero .overlay .hero-content p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 /* --------------------------
@@ -160,6 +202,50 @@ header .container nav ul a:hover::after {
 .hero .hero-text p {
   margin-top: 1rem;
   font-size: 1.5rem;
+}
+
+/* --------------------------
+   Hero (parallax separado)
+---------------------------*/
+.parallax-hero {
+  background-image: url("../img/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.parallax-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.parallax-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+}
+.parallax-hero .hero-content .hero-imagen {
+  max-width: 300px;
+  margin: 0 auto 2rem;
+}
+.parallax-hero .hero-content .hero-imagen img {
+  width: 100%;
+  height: auto;
+}
+.parallax-hero .hero-content .hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.parallax-hero .hero-content .hero-text p {
+  font-size: 1.4rem;
 }
 
 /* --------------------------
@@ -217,6 +303,36 @@ header .container nav ul a:hover::after {
 }
 .menu-list li strong {
   font-weight: bold;
+}
+
+.parallax-ubicacion {
+  background: url("../img/ubicacion.jpg") center/cover fixed no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parallax-ubicacion .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.parallax-ubicacion .ubicacion-contenido {
+  color: var(--white);
+}
+.parallax-ubicacion .ubicacion-contenido h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+.parallax-ubicacion .ubicacion-contenido p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
 /* --------------------------

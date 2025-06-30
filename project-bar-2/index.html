@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Meva Llar - Coffee & Bistro</title>
 
-    <!-- CSS compilado desde style.scss -->
-    <link rel="stylesheet" href="css/style.css" />
-
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
 
-    <!-- Animate.css CDN -->
+    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-
-    
-
 
   <body>
     <main>
-      <!-- Pantalla de carga -->
+      <!-- Preloader moderno -->
       <div id="preloader">
-        <div class="loader"></div>
+        <div class="ripple-loader">
+          <div></div>
+          <div></div>
+        </div>
       </div>
 
       <!-- Contenido principal -->
@@ -53,18 +53,22 @@
           </div>
         </header>
 
-        <!-- Hero -->
-        <section class="hero" id="inicio">
-          <div class="hero-imagen">
-            <img src="img/logo.png" alt="logo" />
-          </div>
-          <div class="hero-text animate__animated animate__fadeInUp">
-            <h1 data-i18n="hero_title">Tapas - Restaurante</h1>
-            <p data-i18n="hero_sub">Un rincón de sabor y calidez</p>
+        <!-- Hero con Parallax -->
+        <section class="parallax-hero" id="inicio">
+          <div class="overlay">
+            <div class="hero-content">
+              <div class="hero-imagen">
+                <img src="img/logo.png" alt="Logo" />
+              </div>
+              <div class="hero-text">
+                <h1 data-i18n="hero_title">Bienvenidos a La Meva Llar</h1>
+                <p data-i18n="hero_sub">Tapas - Restaurante con esencia mediterránea</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- Nosotros --> 
+        <!-- Nosotros -->
         <section class="section" id="nosotros">
           <div class="container">
             <!-- Fila 1 -->
@@ -112,7 +116,6 @@
           </div>
         </section>
 
-
         <!-- Menú -->
         <section class="section light" id="menu">
           <div class="container">
@@ -126,15 +129,19 @@
           </div>
         </section>
 
-        <!-- Contacto -->
-        <section class="section" id="contacto">
-          <div class="container">
-            <h2 data-i18n="contact_title">Contáctanos</h2>
-            <p data-i18n="contact_addr">📍 Calle del Café, 123 – Barcelona</p>
-            <p data-i18n="contact_phone">📞 +34 600 123 456</p>
-            <p data-i18n="contact_mail">✉️ contacto@laretation.com</p>
+        <!-- Ubicación y Horarios con Parallax -->
+        <section class="parallax-ubicacion" id="ubicacion">
+          <div class="overlay">
+            <div class="container ubicacion-contenido">
+              <h2 data-i18n="ubic_title">Ubicación y Horarios</h2>
+              <p data-i18n="ubic_addr">📍 Calle del Café, 123 – Barcelona</p>
+              <p data-i18n="ubic_hours">🕒 Lunes a Domingo: 9:00 - 23:00</p>
+              <p data-i18n="ubic_phone">📞 +34 600 123 456</p>
+              <p data-i18n="ubic_note">* Horarios especiales en festivos</p>
+            </div>
           </div>
         </section>
+
 
         <!-- Footer -->
         <footer>
@@ -143,11 +150,9 @@
       </div>
     </main>
 
-    <!-- JS -->
+    <!-- Scripts -->
     <script src="js/lang.js" type="module"></script>
     <script src="js/script.js"></script>
-
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
