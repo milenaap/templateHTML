@@ -1,17 +1,38 @@
 @charset "UTF-8";
-/* style.scss */
-/* Fuentes y variables */
+/* --------------------------
+   Fuente y Variables
+---------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@300..700&display=swap");
 :root {
   --brand: #F8B78B;
+  --dark: #1e1e1e;
+  --light: #fafafa;
+  --text: #333;
+  --white: #ffffff;
+  --accent: #a79c86;
 }
 
-/* Reset */
-html, body, * {
+/* --------------------------
+   Reset Básico
+---------------------------*/
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
+}
+
+html, body {
+  font-family: "Marcellus", serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: "Marcellus", serif;
 }
 
 /* --------------------------
@@ -76,98 +97,83 @@ html, body, * {
 /* --------------------------
    Header (transparente y sobre hero)
 ---------------------------*/
-.main-header {
+header {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 10;
   background: transparent;
 }
-.main-header .header-container {
+header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
 }
-.main-header .header-logo .logo {
-  width: 100px;
-  height: auto;
-}
-.main-header .header-nav .nav-list {
+header nav ul {
+  list-style: none;
   display: flex;
   gap: 2rem;
-  list-style: none;
   margin: 0;
   padding: 0;
 }
-.main-header .header-nav .nav-list a {
+header nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
 }
-.main-header .header-nav .nav-list a:hover {
-  color: var(--brand);
-}
-.main-header .lang-switch select {
+header select#langSwitch {
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  border: 1px solid #787777;
+  border: 1px solid #f8b78b;
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
 }
+header .logo {
+  width: 100px;
+}
 
-.hero-section {
-  background: url("../img/hero.jpg") center/cover no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
+.parallax-hero {
   position: relative;
+  background-image: url("../img/bg-hero.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-.hero-section .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.hero-section .hero-container {
-  position: relative;
-  z-index: 2;
+.parallax-hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
+  border-radius: 8px;
+}
+.parallax-hero .overlay .hero-content {
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
-.hero-section .hero-image {
-  max-width: 300px;
-  margin-bottom: 2rem;
-}
-.hero-section .hero-image img {
-  width: 100%;
-  height: auto;
-}
-.hero-section .hero-text h1 {
-  font-size: 6rem;
+.parallax-hero .overlay .hero-content img {
+  width: 180px;
   margin-bottom: 1rem;
 }
-.hero-section .hero-text p {
-  font-size: 1.5rem;
+.parallax-hero .overlay .hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.parallax-hero .overlay .hero-content p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 /* --------------------------
    Hero
 ---------------------------*/
 .hero {
-  background: url("../img/hero.jpg") center/cover no-repeat;
+  background: url("../img/hero.png") center/cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -175,26 +181,25 @@ html, body, * {
   align-items: center;
   text-align: center;
 }
-.hero-imagen {
+.hero .hero-imagen {
   position: relative;
   top: 5%;
   z-index: 1;
   max-width: 300px;
   margin-bottom: 2rem;
-  padding-top: 10rem;
 }
-.hero-imagen img {
+.hero .hero-imagen img {
   width: 100%;
   height: auto;
 }
-.hero-text {
+.hero .hero-text {
   color: var(--white);
   padding: 1rem;
 }
-.hero-text h1 {
-  font-size: 10rem;
+.hero .hero-text h1 {
+  font-size: 3rem;
 }
-.hero-text p {
+.hero .hero-text p {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
@@ -203,7 +208,7 @@ html, body, * {
    Hero (parallax separado)
 ---------------------------*/
 .parallax-hero {
-  background-image: url("../img/hero.jpg");
+  background-image: url("../img/hero.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -294,6 +299,7 @@ html, body, * {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  font-family: "Marcellus", serif;
 }
 #menu .menuSwiper {
   width: 100%;
@@ -353,9 +359,6 @@ html, body, * {
   background: #333;
 }
 
-/* --------------------------
-   Sección - Location
----------------------------*/
 .location-section {
   background: url("../img/location.jpg") center/cover fixed no-repeat;
   min-height: 60vh;
@@ -373,39 +376,6 @@ html, body, * {
   justify-content: center;
   padding: 4rem 2rem;
   text-align: center;
-}
-.location-section .location-content {
-  color: var(--white);
-}
-.location-section .location-content h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-}
-.location-section .location-content p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-}
-
-/* --------------------------
-   Sección - Location
----------------------------*/
-.location-section {
-  background: url("../img/location.jpg") center/cover fixed no-repeat;
-  min-height: 60vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.location-section .location-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
 }
 .location-section .location-content {
   color: var(--white);
@@ -435,18 +405,7 @@ footer {
   background: transparent;
   color: var(--white);
   border: 1px solid var(--brand);
-  border-radius: 1px;
+  border-radius: 4px;
   padding: 0.2rem 0.6rem;
   font-family: inherit;
-}
-
-.invisible {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-}
-
-.fade-in {
-  opacity: 1;
-  pointer-events: auto;
 }/*# sourceMappingURL=style.css.map */

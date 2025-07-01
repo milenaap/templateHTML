@@ -359,15 +359,15 @@ header .logo {
   background: #333;
 }
 
-.parallax-ubicacion {
-  background: url("../img/ubicacion.jpg") center/cover fixed no-repeat;
+.location-section {
+  background: url("../img/location.jpg") center/cover fixed no-repeat;
   min-height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.parallax-ubicacion .overlay {
+.location-section .location-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -377,14 +377,14 @@ header .logo {
   padding: 4rem 2rem;
   text-align: center;
 }
-.parallax-ubicacion .ubicacion-contenido {
+.location-section .location-content {
   color: var(--white);
 }
-.parallax-ubicacion .ubicacion-contenido h2 {
+.location-section .location-content h2 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
 }
-.parallax-ubicacion .ubicacion-contenido p {
+.location-section .location-content p {
   font-size: 1.2rem;
   margin: 0.5rem 0;
 }

@@ -1,0 +1,50 @@
+{
+  "logo_alt": "La Meva Llar",
+
+  "select": {
+    "label": "Idioma:"
+  },
+  
+  "home": {
+    "title": "Página de Bienvenida"
+  },
+  
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "menu": "Menú",
+    "contact": "Contacto"
+  },
+
+  "hero": {
+    "title": "Bienvenidos",
+    "sub": "Un rincón acogedor de sabor y calidez"
+  },
+  
+  "about": {
+    "title1": "Sabores que nos definen",
+    "txt1": "En La Meva Llar celebramos la esencia de la cocina mediterránea con recetas de toda la vida elaboradas con ingredientes frescos y locales.",
+    "title2": "Un lugar para compartir",
+    "txt2": "Nuestro espacio está diseñado para reunir a las personas, disfrutar de buena comida, momentos especiales y el calor de hogar."
+  },
+
+  "food_menu": {
+    "title": "Nuestra Carta",
+    "latte": "Café Latte – €2.50",
+    "capp": "Capuchino – €2.80",
+    "cake": "Tarta casera del día – €3.50",
+    "salad": "Ensalada gourmet – €6.90"
+  },
+
+  "contact": {
+    "title": "Contáctanos",
+    "addr": "📍 C/ del Café, 123 – Barcelona",
+    "phone": "📞 +34 600 123 456",
+    "mail": "✉️ contacto@lamevallar.com"
+  },
+
+  "footer": {
+    "priv": "Política de Privacidad",
+    "cookies": "Política de Cookies"
+  }
+}

@@ -1,52 +1,28 @@
 {
   "logo_alt": "La Meva Llar",
-  
-  "select": {
-    "label": "Languaje:"
-  },
+  "nav_home": "Home",
+  "nav_about": "About Us",
+  "nav_menu": "Menu",
+  "nav_contact": "Contact",
+  "hero_title": "Welcome to La Meva Llar",
+  "hero_sub": "A cozy corner of flavor and warmth",
 
-  "home": {
-    "title": "Welcome Page"
-  },
-  
-  "nav": {
-    "home": "Home",
-    "about": "About Us",
-    "menu": "Menu",
-    "contact": "Contact"
-  },
+  "about_title1": "Flavors that define us",
+  "about_txt1": "At La Meva Llar, we celebrate the essence of Mediterranean cuisine with timeless recipes made from fresh, local ingredients.",
+  "about_title2": "A place to gather",
+  "about_txt2": "Our space is designed for people to come together and enjoy good food, heartfelt moments, and the warmth of home.",
 
-  "hero": {
-    "title": "Welcome",
-    "sub": "A cozy corner of flavor and warmth"
-  },
-  
-  "about": {
-    "title1": "Flavors that define us",
-    "txt1": "At La Meva Llar, we celebrate the essence of Mediterranean cuisine with timeless recipes made from fresh, local ingredients.",
-    "title2": "A place to gather",
-    "txt2": "Our space is designed for people to come together and enjoy good food, heartfelt moments, and the warmth of home."
-  },
+  "menu_title": "Our Menu",
+  "menu_latte": "Café Latte – €2.50",
+  "menu_capp":  "Cappuccino – €2.80",
+  "menu_cake":  "Homemade cake of the day – €3.50",
+  "menu_salad": "Gourmet salad – €6.90",
 
- 
-  "food_menu": {
-    "title": "Our Menu",
-    "latte": "Café Latte – €2.50",
-    "capp":  "Cappuccino – €2.80",
-    "cake":  "Homemade cake of the day – €3.50",
-    "salad": "Gourmet salad – €6.90"
-  },
+  "contact_title": "Get in Touch",
+  "contact_addr": "📍 C/ del Café, 123 – Barcelona",
+  "contact_phone": "📞 +34 600 123 456",
+  "contact_mail": "✉️ contact@lamevallar.com",
 
-  "contact": {
-    "title": "Get in Touch",
-    "addr": "📍 C/ del Café, 123 – Barcelona",
-    "phone": "📞 +34 600 123 456",
-    "mail": "✉️ contact@lamevallar.com"
-  },
-
-  "footer": {
-    "priv": "Privacy Policy",
-    "cookies": "Cookies Policy"
-  }
-  
+  "footer_priv": "Privacy Policy",
+  "footer_cookies": "Cookies Policy"
 }

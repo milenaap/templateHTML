@@ -417,15 +417,15 @@ header {
 
 
 
-.parallax-ubicacion {
-  background: url('../img/ubicacion.jpg') center / cover fixed no-repeat;
+.location-section {
+  background: url('../img/location.jpg') center / cover fixed no-repeat;
   min-height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .overlay {
+  .location-overlay {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -436,7 +436,7 @@ header {
     text-align: center;
   }
 
-  .ubicacion-contenido {
+  .location-content {
     color: var(--white);
 
     h2 {
@@ -450,6 +450,7 @@ header {
     }
   }
 }
+
 
 
 /* --------------------------
