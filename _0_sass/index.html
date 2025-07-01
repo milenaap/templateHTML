@@ -20,25 +20,163 @@
 
   <body>
     <main>
-      <!-- Preloader -->
+       <!-- Preloader moderno -->
       <div id="preloader">
-        <div class="loader"></div>
+        <div class="ripple-loader">
+          <div></div>
+          <div></div>
+        </div>
       </div>
 
       <!-- Contenido principal -->
-      <div id="content" hidden>
-        <div class="lang-switcher">
-          <label for="langSwitch" data-i18n="select.label">Idioma:</label>
-          <select id="langSwitch">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-          </select>
-        </div>
+      <div id="content">
+        <!-- Header -->
+        <header>
+          <div class="container">
+            <img src="img/logo.jpg" class="logo" alt="logo" data-i18n-attr="alt:logo" />
 
-        <section class="hero">
-          <h1 data-i18n="hero.title"></h1>
-          <p data-i18n="hero.sub"></p>
+            <nav>
+              <ul>
+                <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                <li><a href="#menu" data-i18n="nav_menu">Menú</a></li>
+                <li><a href="#ubicacion" data-i18n="nav_contact">Contacto</a></li>
+              </ul>
+            </nav>
+
+            <!-- Language switcher -->
+            <select id="langSwitch" aria-label="Idioma">
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+            </select>
+          </div>
+        </header>
+
+        <!-- Hero con Parallax -->
+        <section class="parallax-hero" id="inicio">
+          <div class="overlay">
+            <div class="hero-content">
+              <div class="hero-imagen">
+                <img src="img/logo.jpg" alt="Logo" />
+              </div>
+              <div class="hero-text">
+                <h1 data-i18n="hero_title">Bienvenidos</h1>
+                <p data-i18n="hero_sub">Subtitulo</p>
+              </div>
+            </div>
+          </div>
         </section>
+
+        <!-- Nosotros -->
+        <section class="section" id="nosotros">
+          <div class="container">
+            <!-- Fila 1 -->
+            <div class="about-row">
+              <div class="about-text"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out">
+                <h2 data-i18n="about_title1">Título</h2>
+                <p data-i18n="about_txt1">
+                  En <strong>Lorem ipsum</strong> Lorem ipsum dolor sit amet.
+                </p>
+              </div>
+              <div class="about-img"
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out">
+                <img src="img/nosotros1.jpg" alt="img1" />
+              </div>
+            </div>
+
+            <!-- Fila 2 (zigzag) -->
+            <div class="about-row reverse">
+              <div class="about-text"
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out">
+                <h2 data-i18n="about_title1">Título</h2>
+                <p data-i18n="about_txt1">
+                  En <strong>Lorem ipsum</strong> Lorem ipsum dolor sit amet.
+                </p>
+              </div>
+              <div class="about-img"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out">
+                <img src="img/nosotros2.jpg" alt="img2" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Menú -->
+        <section class="section light" id="menu">
+        <div class="container">
+          <h2 data-i18n="title">Título</h2>
+
+        <!-- Swiper -->
+        <div class="swiper menuSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Página 1 -->
+            <div class="swiper-slide">
+              <img src="img/slider1.jpg" alt="img1" />
+            </div>
+
+            <!-- Página 2 -->
+            <div class="swiper-slide">
+              <img src="img/slider2.jpg" alt="img2" />
+            </div>
+
+            <!-- Página 3 -->
+            <div class="swiper-slide">
+              <img src="img/slider3.jpg" alt="img3" />
+            </div>
+
+          </div>
+
+          <!-- Flechas -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Paginación opcional -->
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+      </section>
+
+
+        <!-- Ubicación y Horarios con Parallax -->
+        <section class="parallax-ubicacion" id="ubicacion">
+          <div class="overlay">
+            <div class="container ubicacion-contenido">
+              <h2 data-i18n="ubic_title">Ubicación y Horarios</h2>
+              <p data-i18n="ubic_addr">📍 Calle Buenos Aires – Barcelona</p>
+              <p data-i18n="ubic_hours">🕒 Lunes a Domingo: 9:00 - 23:00</p>
+              <p data-i18n="ubic_phone">📞 +34 555 555 555</p>
+              <p data-i18n="ubic_note">* Horarios especiales en festivos</p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Footer -->
+       <footer>
+        <div class="footer-text">
+          <p data-i18n="footer_txt">&copy; 2025. Todos los derechos reservados.</p>
+          <p>
+            <a href="privacidad.html" target="_blank" data-i18n="footer_priv">Política de Privacidad</a> |
+            <a href="cookies.html" target="_blank" data-i18n="footer_cookies">Política de Cookies</a>
+          </p>
+        </div>
+      </footer>
+
       </div>
     </main>
 
