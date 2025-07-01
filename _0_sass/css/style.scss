@@ -70,6 +70,8 @@ html, body, * {
 }
 
 
+
+
 /* --------------------------
    Layout General
 ---------------------------*/
@@ -80,90 +82,127 @@ html, body, * {
 }
 
 
+
+
+
 /* --------------------------
    Header (transparente y sobre hero)
 ---------------------------*/
-header {
+.main-header {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 10;
-  background: transparent; // Si quieres que no tape nada
+  background: transparent;
 
-  .container {
+  .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
   }
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-
-    li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.1rem;
+  .header-logo {
+    .logo {
+      width: 100px;
+      height: auto;
     }
   }
 
-  select#langSwitch {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid #787777;
-    padding: 0.4rem 0.6rem;
-    border-radius: 8px;
+  .header-nav {
+    .nav-list {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--brand);
+        }
+      }
+    }
   }
 
-  .logo {
-    width: 100px;
+  .lang-switch {
+    select {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid #787777;
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+    }
   }
 }
 
-.parallax-hero {
-  position: relative;
-  background-image: url('../img/bg-hero.jpg'); // Asegúrate de tener esta imagen
+
+
+
+
+
+.hero-section {
+  background: url('../img/hero.jpg') center / cover no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding-top: 120px; // Para evitar que el nav lo tape
+  height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 1;
 
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
     padding: 2rem;
-    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .hero-content {
-      color: white;
+  .hero-image {
+    max-width: 300px;
+    margin-bottom: 2rem;
 
-      img {
-        width: 180px;
-        margin-bottom: 1rem;
-      }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
-      h1 {
-        font-size: 3rem;
-        margin: 0;
-      }
+  .hero-text {
+    h1 {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+    }
 
-      p {
-        font-size: 1.2rem;
-        margin-top: 0.5rem;
-      }
+    p {
+      font-size: 1.5rem;
     }
   }
 }
+
+
+
+
 
 
 
@@ -179,12 +218,13 @@ header {
   align-items: center;
   text-align: center;
 
-  .hero-imagen {
+  &-imagen {
     position: relative;
     top: 5%;
     z-index: 1;
     max-width: 300px;
     margin-bottom: 2rem;
+    padding-top: 10rem;
     
 
     img {
@@ -193,14 +233,14 @@ header {
     }
   }
 
-  .hero-text {
+  &-text {
     //background-color: rgba(0, 0, 0, 0.5);
     color: var(--white);
     padding: 1rem;
     //border-radius: 10px;
 
     h1 {
-      font-size: 3rem;
+      font-size: 10rem;
     }
 
     p {
@@ -209,6 +249,9 @@ header {
     }
   }
 }
+
+
+
 
 /* --------------------------
    Hero (parallax separado)
@@ -261,6 +304,9 @@ header {
     }
   }
 }
+
+
+
 
 
 
@@ -392,15 +438,21 @@ header {
 
 
 
-.parallax-ubicacion {
-  background: url('../img/ubicacion.jpg') center / cover fixed no-repeat;
+
+
+
+/* --------------------------
+   Sección - Location
+---------------------------*/
+.location-section {
+  background: url('../img/location.jpg') center / cover fixed no-repeat;
   min-height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .overlay {
+  .location-overlay {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -411,7 +463,7 @@ header {
     text-align: center;
   }
 
-  .ubicacion-contenido {
+  .location-content {
     color: var(--white);
 
     h2 {
@@ -425,6 +477,49 @@ header {
     }
   }
 }
+
+
+
+
+/* --------------------------
+   Sección - Location
+---------------------------*/
+.location-section {
+  background: url('../img/location.jpg') center / cover fixed no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .location-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .location-content {
+    color: var(--white);
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+
+
 
 
 /* --------------------------

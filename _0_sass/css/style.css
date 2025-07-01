@@ -76,76 +76,91 @@ html, body, * {
 /* --------------------------
    Header (transparente y sobre hero)
 ---------------------------*/
-header {
+.main-header {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 10;
   background: transparent;
 }
-header .container {
+.main-header .header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
 }
-header nav ul {
-  list-style: none;
+.main-header .header-logo .logo {
+  width: 100px;
+  height: auto;
+}
+.main-header .header-nav .nav-list {
   display: flex;
   gap: 2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
-header nav ul li a {
+.main-header .header-nav .nav-list a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
-header select#langSwitch {
+.main-header .header-nav .nav-list a:hover {
+  color: var(--brand);
+}
+.main-header .lang-switch select {
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border: 1px solid #787777;
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
 }
-header .logo {
-  width: 100px;
-}
 
-.parallax-hero {
-  position: relative;
-  background-image: url("../img/bg-hero.jpg");
+.hero-section {
+  background: url("../img/hero.jpg") center/cover no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding-top: 120px;
+  height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.hero-section .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.parallax-hero .overlay {
-  background: rgba(0, 0, 0, 0.5);
+.hero-section .hero-container {
+  position: relative;
+  z-index: 2;
   padding: 2rem;
-  border-radius: 8px;
-}
-.parallax-hero .overlay .hero-content {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.parallax-hero .overlay .hero-content img {
-  width: 180px;
+.hero-section .hero-image {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+.hero-section .hero-image img {
+  width: 100%;
+  height: auto;
+}
+.hero-section .hero-text h1 {
+  font-size: 6rem;
   margin-bottom: 1rem;
 }
-.parallax-hero .overlay .hero-content h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-.parallax-hero .overlay .hero-content p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+.hero-section .hero-text p {
+  font-size: 1.5rem;
 }
 
 /* --------------------------
@@ -160,25 +175,26 @@ header .logo {
   align-items: center;
   text-align: center;
 }
-.hero .hero-imagen {
+.hero-imagen {
   position: relative;
   top: 5%;
   z-index: 1;
   max-width: 300px;
   margin-bottom: 2rem;
+  padding-top: 10rem;
 }
-.hero .hero-imagen img {
+.hero-imagen img {
   width: 100%;
   height: auto;
 }
-.hero .hero-text {
+.hero-text {
   color: var(--white);
   padding: 1rem;
 }
-.hero .hero-text h1 {
-  font-size: 3rem;
+.hero-text h1 {
+  font-size: 10rem;
 }
-.hero .hero-text p {
+.hero-text p {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
@@ -337,15 +353,18 @@ header .logo {
   background: #333;
 }
 
-.parallax-ubicacion {
-  background: url("../img/ubicacion.jpg") center/cover fixed no-repeat;
+/* --------------------------
+   Sección - Location
+---------------------------*/
+.location-section {
+  background: url("../img/location.jpg") center/cover fixed no-repeat;
   min-height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.parallax-ubicacion .overlay {
+.location-section .location-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -355,14 +374,47 @@ header .logo {
   padding: 4rem 2rem;
   text-align: center;
 }
-.parallax-ubicacion .ubicacion-contenido {
+.location-section .location-content {
   color: var(--white);
 }
-.parallax-ubicacion .ubicacion-contenido h2 {
+.location-section .location-content h2 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
 }
-.parallax-ubicacion .ubicacion-contenido p {
+.location-section .location-content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* --------------------------
+   Sección - Location
+---------------------------*/
+.location-section {
+  background: url("../img/location.jpg") center/cover fixed no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.location-section .location-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+.location-section .location-content {
+  color: var(--white);
+}
+.location-section .location-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+.location-section .location-content p {
   font-size: 1.2rem;
   margin: 0.5rem 0;
 }
