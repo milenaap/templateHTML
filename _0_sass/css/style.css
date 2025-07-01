@@ -151,7 +151,6 @@ header .logo {
 .parallax-hero .overlay {
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  border-radius: 8px;
 }
 .parallax-hero .overlay .hero-content {
   color: white;
