@@ -3,31 +3,219 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebSite</title>
+    <title>La Meva Llar - Coffee & Bistro</title>
 
-    <!-- CSS compile style.scss -->
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Swiper CSS -->
+   <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <main>
-        
-      <!-- Screen load -->
+      <!-- Preloader moderno -->
       <div id="preloader">
-        <div class="loader"></div>
+        <div class="ripple-loader">
+          <div></div>
+          <div></div>
+        </div>
       </div>
 
+      <!-- Contenido principal -->
+      <div id="content">
+        <!-- Header -->
+        <header>
+          <div class="container">
+            <img src="img/logo.png" class="logo" alt="La Meva Llar" data-i18n-attr="alt:logo_alt" />
 
-      <!-- Main Content -->
-      <div id="content" hidden>
-        <h1>Bienvenido a la página</h1>
-        <p>Este es el contenido principal.</p>
-      </div>
+            <nav>
+              <ul>
+                <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                <li><a href="#menu" data-i18n="nav_menu">Menú</a></li>
+                <li><a href="#ubicacion" data-i18n="nav_contact">Contacto</a></li>
+              </ul>
+            </nav>
+
+            <!-- Language switcher -->
+            <select id="langSwitch" aria-label="Idioma">
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+            </select>
+          </div>
+        </header>
+
+        <!-- Hero con Parallax -->
+        <section class="parallax-hero" id="inicio">
+          <div class="overlay">
+            <div class="hero-content">
+              <div class="hero-imagen">
+                <img src="img/logo.png" alt="Logo" />
+              </div>
+              <div class="hero-text">
+                <h1 data-i18n="hero_title">Bienvenidos a La Meva Llar</h1>
+                <p data-i18n="hero_sub">Tapas - Restaurante con esencia mediterránea</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section class="section" id="nosotros">
+          <div class="container">
+            <!-- Fila 1 -->
+            <div class="about-row">
+              <div class="about-text"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out">
+                <h2 data-i18n="about_title1">Sabores que nos definen</h2>
+                <p data-i18n="about_txt1">
+                  En <strong>La Meva Llar</strong> celebramos la esencia de la cocina mediterránea
+                  con recetas de toda la vida, elaboradas con productos frescos y locales.
+                </p>
+              </div>
+              <div class="about-img"
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out">
+                <img src="img/plato1.png" alt="Plato mediterráneo" />
+              </div>
+            </div>
+
+            <!-- Fila 2 (zigzag) -->
+            <div class="about-row reverse">
+              <div class="about-text"
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out">
+                <h2 data-i18n="about_title2">Un lugar para compartir</h2>
+                <p data-i18n="about_txt2">
+                  Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato.
+                </p>
+              </div>
+              <div class="about-img"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out">
+                <img src="img/restaurante.png" alt="Interior del restaurante" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Menú -->
+        <section class="section light" id="menu">
+        <div class="container">
+          <h2 data-i18n="menu_title">Nuestra Carta---</h2>
+
+        <!-- Swiper -->
+        <div class="swiper menuSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Página 1 -->
+            <div class="swiper-slide">
+              <img src="img/carta1.jpg" alt="Carta 1" />
+            </div>
+
+            <!-- Página 2 -->
+            <div class="swiper-slide">
+              <img src="img/carta2.jpg" alt="Carta 2" />
+            </div>
+
+            <!-- Página 3 -->
+            <div class="swiper-slide">
+              <img src="img/carta3.jpg" alt="Carta 3" />
+            </div>
+
+          </div>
+
+          <!-- Flechas -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Paginación opcional -->
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+      </section>
+
+
+        <!-- Ubicación y Horarios con Parallax -->
+        <section class="location-section" id="location">
+          <div class="location-overlay">
+            <div class="container location-content">
+              <h2 data-i18n="location_title">Ubicación y Horarios</h2>
+              <p data-i18n="location_address">📍 Calle Buenos Aires, 12 – Barcelona</p>
+              <p data-i18n="location_hours">🕒 Lunes a Domingo: 9:00 - 23:00</p>
+              <p data-i18n="location_phone">📞 +34 600 123 456</p>
+              <p data-i18n="location_note">* Horarios especiales en festivos</p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Footer -->
+       <footer>
+        <div class="footer-text">
+          <p data-i18n="footer_txt">&copy; 2025 La Retation Coffee & Bistro. Todos los derechos reservados.</p>
+          <p>
+            <a href="privacidad.html" target="_blank" data-i18n="footer_priv">Política de Privacidad</a> |
+            <a href="cookies.html" target="_blank" data-i18n="footer_cookies">Política de Cookies</a>
+          </p>
+        </div>
+      </footer>
+
     </main>
 
-    <!-- scripts -->
+    <!-- Scripts -->
+    <script src="js/lang.js" type="module"></script>
     <script src="js/script.js"></script>
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Inicialización del carrusel -->
+    <script>
+      const swiper = new Swiper('.menuSwiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        grabCursor: true
+      });
+    </script>
+
+
   </body>
 </html>

@@ -1,0 +1,563 @@
+/* style.scss */
+
+/* Fuentes y variables */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+  --brand: #F8B78B;
+}
+
+/* Reset */
+html, body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* --------------------------
+   Preloader Moderno (Ripple)
+---------------------------*/
+/* --------------------------
+   Preloader Moderno (Ripple)
+---------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.ripple-loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  div {
+    position: absolute;
+    border: 4px solid var(--brand);
+    border-radius: 50%;
+    animation: ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+
+  div:nth-child(2) {
+    animation-delay: -0.6s;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+/* --------------------------
+   Layout General
+---------------------------*/
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+
+
+
+
+/* --------------------------
+   Header (transparente y sobre hero)
+---------------------------*/
+.main-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .header-logo {
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  .header-nav {
+    .nav-list {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--brand);
+        }
+      }
+    }
+  }
+
+  .lang-switch {
+    select {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid #787777;
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+    }
+  }
+}
+
+
+
+
+
+
+.hero-section {
+  background: url('../img/hero.jpg') center / cover no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 300px;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .hero-text {
+    h1 {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+/* --------------------------
+   Hero
+---------------------------*/
+.hero {
+  background: url('../img/hero.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &-imagen {
+    position: relative;
+    top: 5%;
+    z-index: 1;
+    max-width: 300px;
+    margin-bottom: 2rem;
+    padding-top: 10rem;
+    
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-text {
+    //background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    padding: 1rem;
+    //border-radius: 10px;
+
+    h1 {
+      font-size: 10rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+
+
+/* --------------------------
+   Hero (parallax separado)
+---------------------------*/
+.parallax-hero {
+  background-image: url('../img/hero.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 2rem;
+
+    .hero-imagen {
+      max-width: 300px;
+      margin: 0 auto 2rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .hero-text {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/* --------------------------
+   Secciones
+---------------------------*/
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+  }
+
+  p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+
+  &.light {
+    background-color: var(--white);
+  }
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4rem 0;
+  gap: 2rem;
+
+  .about-text,
+  .about-img {
+    flex: 1;
+  }
+
+  .about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+
+/* --------------------------
+   Sección - Menú (Swiper)
+---------------------------*/
+#menu {
+  padding: 4rem 0;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .menuSwiper {
+    width: 100%;
+    max-width: 11000px;
+    margin: 0 auto;
+    position: relative;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease;
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #F8B78B;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.3s ease;
+
+      &::after {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .swiper-pagination {
+      margin-top: 1rem;
+      text-align: center;
+
+      .swiper-pagination-bullet {
+        background: #F8B78B;
+        opacity: 1;
+
+        &-active {
+          background: #333;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/* --------------------------
+   Sección - Location
+---------------------------*/
+.location-section {
+  background: url('../img/location.jpg') center / cover fixed no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .location-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .location-content {
+    color: var(--white);
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+
+
+
+/* --------------------------
+   Sección - Location
+---------------------------*/
+.location-section {
+  background: url('../img/location.jpg') center / cover fixed no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .location-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .location-content {
+    color: var(--white);
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+
+
+
+
+/* --------------------------
+   Footer
+---------------------------*/
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Selector para el switcher */
+#langSwitch {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--brand);
+  border-radius: 1px;
+  padding: .2rem .6rem;
+  font-family: inherit;
+}
+
+
+
+
+.invisible {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  pointer-events: auto;
+}
