@@ -7,23 +7,22 @@ window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
   const content = document.getElementById('content');
 
-  // Esperar al menos 2 segundos antes de mostrar el contenido
+  if (!preloader || !content) return;
+
   setTimeout(() => {
-    content.hidden = false;
+    // Oculta preloader
     preloader.classList.add('hidden');
 
-    // Eliminar el preloader del DOM después de la transición
+    // ⚠️ Forzamos un repaint antes de añadir la clase para que se active la transición
+    content.classList.remove('invisible');
+
+    // Esto asegura que el navegador repinte antes de aplicar la transición
+    requestAnimationFrame(() => {
+      content.classList.add('fade-in');
+    });
+
+    // Eliminar el preloader del DOM cuando termine de desvanecerse
     preloader.addEventListener('transitionend', () => preloader.remove());
-  }, 1000); // Cambia 1000 por el tiempo en milisegundos que desees
+  }, 1000);
 });
 
-for (const sheet of document.styleSheets) {
-  try {
-    const rules = sheet.cssRules;
-    // Solo si se accede correctamente
-    // Haz algo con las rules
-  } catch (e) {
-    // Hoja inaccesible (por CORS)
-    console.warn('No se pudo acceder a', sheet.href);
-  }
-}
