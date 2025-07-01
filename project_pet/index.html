@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo Mascota</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Preloader -->
+      <div id="preloader">
+        <div class="loader"></div>
+      </div>
+
+      <!-- Contenido principal -->
+      <div id="content" hidden>
+        <!-- Header -->
+        <header>
+          <h1>Mundo Mascota 🐾</h1>
+          <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero" id="inicio">
+          <h2>Tu compañero peludo merece lo mejor</h2>
+          <p>Veterinaria, adopciones, productos y más para tu mascota feliz.</p>
+          <a href="#servicios" class="btn">Ver servicios</a>
+        </section>
+
+        <!-- Servicios -->
+        <section class="servicios" id="servicios">
+          <h3>¿Qué ofrecemos?</h3>
+          <div class="grid">
+            <div class="card">
+              <h4>🐶 Adopción</h4>
+              <p>Encuentra a tu nuevo mejor amigo.</p>
+            </div>
+            <div class="card">
+              <h4>🩺 Veterinaria</h4>
+              <p>Cuida su salud con nuestro equipo profesional.</p>
+            </div>
+            <div class="card">
+              <h4>🛍️ Tienda</h4>
+              <p>Juguetes, comida y accesorios especiales.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contacto">
+          <p>&copy; 2025 Mundo Mascota - Todos los derechos reservados</p>
+        </footer>
+      </div>
+    </main>
+
+    <script>
+      // Mostrar contenido cuando se carga
+      window.addEventListener("load", () => {
+        document.getElementById("preloader").classList.add("hidden");
+        document.getElementById("content").removeAttribute("hidden");
+      });
+    </script>
+  </body>
+</html>
