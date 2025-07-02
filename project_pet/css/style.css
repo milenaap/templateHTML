@@ -67,7 +67,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   color: white;
   -webkit-backdrop-filter: blur(4px);
@@ -91,11 +91,15 @@ header nav a {
   color: white;
   text-align: center;
   padding: 10rem 2rem;
+  height: 100vh;
 }
-.hero h2 {
+.hero .hero-text {
+  padding: 4rem;
+}
+.hero .hero-text h2 {
   font-size: 2.5rem;
 }
-.hero p {
+.hero .hero-text p {
   font-size: 1.2rem;
   margin: 1rem 0;
 }
@@ -159,6 +163,24 @@ header nav a {
   background-color: #f8e3d3;
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: rgba(248, 183, 139, 0.7);
+  border-radius: 20px;
+}
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.about p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* --------------------------
