@@ -19,16 +19,22 @@
     <div id="content" hidden>
       <!-- Header -->
       <header>
-        <h1>Mundo Mascota 🐾</h1>
-        <nav>
-          <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#menu">Menú</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
-        </nav>
+        <h1 class="logo">Mundo Mascota 🐾</h1>
       </header>
+
+      <!-- Botón siempre visible y encima de todo -->
+      <button id="menu-toggle" class="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+
+
+      <!-- Menú lateral -->
+      <nav id="side-menu" class="side-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+      </nav>
+
 
       <!-- Hero -->
       <section class="hero" id="inicio">
@@ -39,13 +45,13 @@
           <p>Somos un equipo apasionado por el bienestar animal. Desde 2010 cuidando y acompañando a miles de mascotas.
           </p>
         </section>
-        
+
         <div class="hero-text">
           <h2>Tu compañero peludo merece lo mejor</h2>
           <p>Veterinaria, adopciones, productos y más para tu mascota feliz.</p>
           <a href="#servicios" class="btn">Ver servicios</a>
         </div>
-        
+
       </section>
 
 
@@ -86,6 +92,25 @@
       document.getElementById("content").removeAttribute("hidden");
     });
   </script>
+
+  <script>
+
+    // Mostrar contenido cuando se carga
+    window.addEventListener("load", () => {
+      document.getElementById("preloader").classList.add("hidden");
+      document.getElementById("content").removeAttribute("hidden");
+    });
+
+    // Abrir/cerrar menú lateral
+    const toggleBtn = document.getElementById("menu-toggle");
+    const sideMenu = document.getElementById("side-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("open");
+    });
+
+  </script>
+
 </body>
 
 </html>
