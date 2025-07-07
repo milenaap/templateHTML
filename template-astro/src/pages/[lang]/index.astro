@@ -1,0 +1,15 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import en from '../../locales/en.json';
+import es from '../../locales/es.json';
+
+const lang = Astro.params.lang;
+const translations = lang === 'es' ? es : en;
+
+---
+
+
+<MainLayout translations={translations}>
+    <p>{translations.description}</p>
+</MainLayout>
+

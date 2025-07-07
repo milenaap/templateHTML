@@ -4,10 +4,16 @@ import Navbar from "../components/Navbar.astro";
 import ClientRouter from "astro/components/ClientRouter.astro";
 
 interface Props {
-	title: string;
+	title?: string;
+	translations: {
+		title: string;
+		description: string;
+		home: string;
+	};
 }
 
-const {title} = Astro.props;
+const { translations, title: customTitle } = Astro.props;
+const title = customTitle ?? translations.title;
 ---
 
 <html lang="en">
