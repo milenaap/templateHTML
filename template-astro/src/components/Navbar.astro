@@ -1,11 +1,50 @@
 ---
-const navTitle = 'Navigation';
+
 ---
-<span>{navTitle}</span>
-<nav>
-  <a href="/">Home Page | </a>
-  <a href="/about">About Page | </a>
-  <a href="/contact">Contact Page |</a>
+
+<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+  <div class="flex lg:flex-1">
+    <a href="#" class="-m-1.5 p-1.5">
+      <span class="sr-only">Your Company</span>
+      <img
+        class="h-8 w-auto"
+        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+        alt=""
+      />
+    </a>
+  </div>
+  <div class="flex lg:hidden">
+    <button
+      type="button"
+      class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="size-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        aria-hidden="true"
+        data-slot="icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="hidden lg:flex lg:gap-x-12">
+    <a href="#" class="text-sm/6 font-semibold text-primary">Product</a>
+    <a href="#" class="text-sm/6 font-semibold text-primary">Features</a>
+    <a href="#" class="text-sm/6 font-semibold text-primary">Marketplace</a>
+    <a href="#" class="text-sm/6 font-semibold text-primary">Company</a>
+  </div>
+  <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+    <a href="#" class="text-sm/6 font-semibold text-primary"
+      >Log in <span aria-hidden="true">&rarr;</span></a
+    >
+  </div>
 </nav>
 
-<hr>
