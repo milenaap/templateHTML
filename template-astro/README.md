@@ -38,7 +38,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## Libraries
 
-Tailwind
+## Tailwind
 
 ```sh
 npm install tailwindcss @tailwindcss/vite
