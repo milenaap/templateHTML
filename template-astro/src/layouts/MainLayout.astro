@@ -20,10 +20,8 @@ const { translations, title: customTitle } = Astro.props;
 const title = customTitle ?? translations.title;
 
 
-
 const currentLang = Astro.currentLocale || 'es';
 console.log(currentLang);
-console.log('pasa');
 const translateLabels = useTranslations(currentLang as keyof typeof languages);
 
 

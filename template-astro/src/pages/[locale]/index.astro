@@ -16,9 +16,9 @@ const name = 'Milena Aguilar'
 const title = 'Home Page'
 
 
-const data = Astro.locals;
+const { locals } = Astro;
 
-console.log("hola");
+
 
 ---
 
@@ -36,7 +36,8 @@ console.log("hola");
 	Hello world!
 	</h1>
 
-	<h1>{data.title}</h1>
+	<h1>{locals.title}</h1>
+	
 
 	<button type="button" class="btn">Button text</button>
 
