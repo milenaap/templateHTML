@@ -1,7 +1,7 @@
 
 export const languages = {
   en: 'English',
-  de: 'German',
+  es: 'Español',
 };
 
 export const defaultLang = 'en';
@@ -9,11 +9,16 @@ export const defaultLang = 'en';
 export const ui = {
   en: {
     'nav.home': 'Home',
+    'nav.about': 'About',
     'nav.hello': 'Hello',
-    'nav.twitter': 'Twitter',
+    'home.title': 'Welcome',
+    'about.title': 'Nosotros',
   },
-  de: {
-    'nav.home': 'Start',
-    'nav.hello': 'Hallo cdtm',
+  es: {
+    'nav.home': 'Inicio',
+    'nav.about': 'Nosotros',
+    'nav.hello': 'Hola',
+    'home.title': 'Bienvenido',
+    'about.title': 'Nosotros',
   },
 } as const;
