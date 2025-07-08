@@ -14,6 +14,12 @@ export async function getStaticPaths() {
 
 const name = 'Milena Aguilar'
 const title = 'Home Page'
+
+
+const data = Astro.locals;
+
+console.log("hola");
+
 ---
 
 <ul>
@@ -30,6 +36,7 @@ const title = 'Home Page'
 	Hello world!
 	</h1>
 
+	<h1>{data.title}</h1>
 
 	<button type="button" class="btn">Button text</button>
 
