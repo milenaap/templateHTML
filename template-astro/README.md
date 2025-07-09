@@ -4,11 +4,6 @@
 npm create astro@latest -- --template minimal
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ## 🚀 Project Structure
 
@@ -93,30 +88,33 @@ const t = useTranslations(lang);        // Carga las traducciones
 </html>
 
 
-4. Crea Archivo utils.js o utils.ts (en src/i18n/utils.js)
+4. Crea Archivo utils.js o utils.ts (en src/i18n/utils.ts)
 
 
 import es from './es.json';
 import en from './en.json';
 
-export const languages = {
-  es,
-  en,
-};
+export const languages = { es, en } as const;
 
-export function getLangFromUrl(url) {
-  const langCode = url.pathname.split('/')[1];
-  if (languages[langCode]) return langCode;
-  return 'es'; // fallback
-}
+type TranslationObject = typeof es;
 
-export function useTranslations(lang) {
-  return function t(key) {
+// Profundiza en el objeto para obtener todas las claves tipo "home.title"
+type DeepKeys<T, P extends string = ""> = {
+  [K in keyof T]: T[K] extends object
+    ? DeepKeys<T[K], `${P}${K & string}.`>
+    : `${P}${K & string}`;
+}[keyof T];
+
+export type TranslationKey = DeepKeys<TranslationObject>;
+
+export function useTranslations(lang: keyof typeof languages) {
+  return function t(key: TranslationKey): string {
     return key
       .split('.')
-      .reduce((obj, segment) => obj?.[segment], languages[lang]) || key;
+      .reduce((obj: any, segment: string) => obj?.[segment], languages[lang]) || key;
   };
 }
+
 
 5. Traducciones en src/i18n/es.json y src/i18n/en.json
 
