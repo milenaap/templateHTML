@@ -1,13 +1,23 @@
-import { ui, defaultLang } from './ui';
+import es from './es.json';
+import en from './en.json';
 
-export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split('/');
-  if (lang in ui) return lang as keyof typeof ui;
-  return defaultLang;
-}
+export const languages = { es, en } as const;
 
-export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof typeof ui[typeof defaultLang]) {
-    return key in ui[lang] ? (ui[lang] as any)[key] : ui[defaultLang][key];
-  }
+type TranslationObject = typeof es;
+
+// Profundiza en el objeto para obtener todas las claves tipo "home.title"
+type DeepKeys<T, P extends string = ""> = {
+  [K in keyof T]: T[K] extends object
+    ? DeepKeys<T[K], `${P}${K & string}.`>
+    : `${P}${K & string}`;
+}[keyof T];
+
+export type TranslationKey = DeepKeys<TranslationObject>;
+
+export function useTranslations(lang: keyof typeof languages) {
+  return function t(key: TranslationKey): string {
+    return key
+      .split('.')
+      .reduce((obj: any, segment: string) => obj?.[segment], languages[lang]) || key;
+  };
 }
