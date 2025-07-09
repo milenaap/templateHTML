@@ -3,5 +3,15 @@
     "title": "Inicio",
     "heading": "Bienvenido",
     "description": "Esta es la versión en español."
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "heading": "Acerca de nuestra empresa",
+    "description": "Somos una empresa dedicada a..."
+  },
+  "contact": {
+    "title": "Contacto",
+    "heading": "Ponte en contacto",
+    "description": "Puedes escribirnos a través del formulario..."
   }
 }
