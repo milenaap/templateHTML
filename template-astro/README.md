@@ -140,7 +140,20 @@ en.json
 }
 
 
+```
 
+
+
+
+
+
+## Tailwind
+
+Entramos a la documentación de AstroJS
+
+```sh
+
+npx astro add tailwind
 
 
 ```
