@@ -1,0 +1,26 @@
+---
+import { getLangFromUrl, loadTranslations, useTranslations } from '../../i18n/utils';
+
+// 👇 Esta es la parte nueva que necesitas
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } }
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+// const t = await loadTranslations(lang);
+
+---
+
+<html lang={lang}>
+  <head>
+    <title>{t("home.title")}</title>
+  </head>
+  <body>
+    <h1>{t("home.heading")}</h1>
+    <p>{t("home.description")}</p>
+  </body>
+</html>
