@@ -13,12 +13,15 @@ export async function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang as 'es');
 
-
 const title = t("home.title");
 
 ---
 
+
 <MainLayout title={title} lang={lang}>
-    <h1>{t("home.heading")}</h1>
+
+    <h1 class="text-3xl text-gray-700">{t("home.heading")}</h1>
+
     <p>{t("home.description")}</p>
+
 </MainLayout>

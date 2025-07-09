@@ -1,6 +1,7 @@
 ---
+import "../styles/global.css";
 import ClientRouter from 'astro/components/ClientRouter.astro';
-import { useTranslations } from '../i18n/utils';
+//import { useTranslations } from '../i18n/utils';
 
 interface Props {
     title: string;
@@ -49,16 +50,23 @@ const {title, lang} = Astro.props;
     <meta property="og:url" content="https://tusitio.com">
     <meta property="og:type" content="website">
 
-
     <!-- END esto va dinamico -->
 
 
     <title>{title}</title>
-    <ClientRouter />
 
+    <ClientRouter />
     
   </head>
   <body>
-    <slot />
+    
+    <!-- TODO crear l Navbar -->
+
+    <main class="m-10">
+
+      <slot />
+
+    </main>
+    
   </body>
-  </html>
+</html>
