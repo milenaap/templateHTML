@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from '../../i18n/utils';
+import MainLayout from '../../layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
   return [
@@ -12,15 +13,14 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as 'es' | 'en');
 ---
 
-<html lang={lang}>
-  <head>
-    <meta charset="UTF-8" />
-    <title>{t("contact.title")}</title>
-  </head>
-  <body>
-    <h1>{t("contact.heading")}</h1>
-    <p>{t("contact.description")}</p>
-  </body>
-</html>
+<MainLayout>
+
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("contact.heading")}</h1>
+
+    <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t("contact.description")}</p>
+
+</MainLayout>
+
+
 
 
