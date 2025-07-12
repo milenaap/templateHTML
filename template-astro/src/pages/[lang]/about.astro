@@ -10,8 +10,26 @@ const { lang, t, title } = getI18nProps(Astro.params, 'about');
 
 <MainLayout title={title} lang={lang}>
 
-  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t('about.heading')}</h1>
-
-  <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t('about.description')}</p>
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <p class="text-base/7 font-semibold text-secondary">
+          {t('about.heading')}
+        </p>
+        <h2
+          class="mt-2 text-5xl font-semibold tracking-tight text-primary sm:text-7xl"
+        >
+          {t('about.description')}
+        </h2>
+        <p
+          class="mt-8 text-lg font-medium text-pretty text-neutral-light sm:text-xl/8"
+        >
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+          lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+          fugiat.
+        </p>
+      </div>
+    </div>
+  </div>
 
 </MainLayout>
