@@ -1,0 +1,18 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getStaticPaths, getI18nProps } from '../../i18n/helperi18n';
+
+export { getStaticPaths };
+
+const { lang, t, title } = getI18nProps(Astro.params, 'space');
+
+---
+
+
+<MainLayout title={title} lang={lang}>
+
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t('space.heading')}</h1>
+
+  <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t('space.description')}</p>
+
+</MainLayout>

@@ -1,26 +1,18 @@
 ---
-import { useTranslations } from '../../i18n/utils';
 import MainLayout from '../../layouts/MainLayout.astro';
+import { getStaticPaths, getI18nProps } from '../../i18n/helperi18n';
 
-export async function getStaticPaths() {
-  return [
-    { params: { lang: 'es' } },
-    { params: { lang: 'en' } }
-  ];
-}
+export { getStaticPaths };
 
-const { lang } = Astro.params;
-const t = useTranslations(lang as 'es' | 'en');
+const { lang, t, title } = getI18nProps(Astro.params, 'contact');
+
 ---
 
-<MainLayout>
 
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("contact.heading")}</h1>
+<MainLayout title={title} lang={lang}>
 
-    <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t("contact.description")}</p>
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t('contact.heading')}</h1>
+
+  <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t('contact.description')}</p>
 
 </MainLayout>
-
-
-
-
