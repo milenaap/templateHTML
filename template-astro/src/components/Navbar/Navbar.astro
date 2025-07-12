@@ -69,10 +69,10 @@ const t = useTranslations(lang);
       <!-- <a href={`/${lang}/about`} class="text-sm/6 font-semibold text-primary">Marketplace</a>
       <a href="#" class="text-sm/6 font-semibold text-primary">Company</a> -->
     </div>
-    <div class="hidden lg:flex lg:gap-x-12">
-      <LangSelector lang={lang} client:load />
-    </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <div class="mr-5">
+        <LangSelector lang={lang} client:load />
+      </div>
       <a href="#" class="text-sm/6 font-semibold text-primary"
         >Log in <span aria-hidden="true">&rarr;</span></a
       >
