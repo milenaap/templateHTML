@@ -1,0 +1,25 @@
+---
+import { useTranslations } from '../../i18n/utils';
+import LangSelector from './LangSelector.jsx';
+import type { SupportedLang } from '../../i18n/utils';
+
+interface Props {
+  lang: SupportedLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<nav class="bg-white shadow-md px-4 py-3 flex items-center justify-between">
+  <a href={`/${lang}`} class="text-xl font-bold text-gray-800">{t("navbar.brand")}</a>
+
+  <ul class="flex gap-6 text-gray-600 font-medium items-center">
+    <li><a href={`/${lang}/about`} class="hover:text-black">{t("navbar.about")}</a></li>
+    <li><a href={`/${lang}/contact`} class="hover:text-black">{t("navbar.contact")}</a></li>
+
+    <li>
+      <LangSelector lang={lang} client:load />
+    </li>
+  </ul>
+</nav>

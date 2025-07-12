@@ -7,15 +7,36 @@ npm create astro@latest -- --template minimal
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Folders and files:
 
 ```text
 /
 ├── public/
+│   └── favicon.svg
 ├── src/
+│   └── components/
+│       └── Nabvar/
+│           └── LangSelector.jsx
+│           └── Nabvar.astro
+│   └── i18n/
+│       └── en.json
+│       └── es.json
+│       └── utils.ts
+│   └── layouts/
+│       └── MainLayout.astro
 │   └── pages/
+│       └── [lang]/
+│           └── index.astro
+│           └── contact.astro
+│           └── about.astro
 │       └── index.astro
+│   └── styles/
+│       └── gobal.css
+└── .gitignore
+└── astro.config.mjs
 └── package.json
+└── README.md
+└── tsconfig.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
@@ -152,6 +173,19 @@ Entramos a la documentación de AstroJS
 ```sh
 
 npx astro add tailwind
+
+
+```
+
+
+
+## React
+
+Entramos a la documentación de AstroJS
+
+```sh
+
+npx astro add react
 
 
 ```

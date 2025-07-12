@@ -21,3 +21,7 @@ export function useTranslations(lang: keyof typeof languages) {
       .reduce((obj: any, segment: string) => obj?.[segment], languages[lang]) || key;
   };
 }
+
+
+export type SupportedLang = keyof typeof languages;
+

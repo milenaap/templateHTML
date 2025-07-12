@@ -1,27 +1,18 @@
 ---
-import { useTranslations } from '../../i18n/utils';
+import { getStaticPaths, getI18nProps } from '../../i18n/helpers';
 import MainLayout from '../../layouts/MainLayout.astro';
 
-// 👇 Esta es la parte nueva que necesitas
-export async function getStaticPaths() {
-  return [
-    { params: { lang: 'es' } },
-    { params: { lang: 'en' } }
-  ];
-}
+export { getStaticPaths };
 
-const { lang } = Astro.params;
-const t = useTranslations(lang as 'es');
-
-const title = t("home.title");
+const { lang, t, title } = getI18nProps(Astro.params, 'home');
 
 ---
 
 
 <MainLayout title={title} lang={lang}>
 
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("home.heading")}</h1>
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t('home.heading')}</h1>
 
-    <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t("home.description")}</p>
+  <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">{t('home.description')}</p>
 
 </MainLayout>

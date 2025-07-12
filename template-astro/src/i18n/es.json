@@ -1,4 +1,11 @@
 {
+  "navbar": {
+    "lang_es": "Español",
+    "lang_en": "English",
+    "brand": "MiSitio",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
   "home": {
     "title": "Inicio",
     "heading": "Bienvenido",

@@ -1,4 +1,11 @@
 {
+   "navbar": {
+    "lang_es": "Español",
+    "lang_en": "English",
+    "brand": "MySite",
+    "about": "About",
+    "contact": "Contact"
+  },
   "home": {
     "title": "Home",
     "heading": "Welcome",
