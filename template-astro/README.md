@@ -204,3 +204,32 @@ Crear componente react y llamarlo luego
 
 
 ```
+
+## Aos
+
+Instalar AOS.
+
+```sh
+
+npm install aos
+
+
+
+En MainLayout se agrega un script: 
+---
+import 'aos/dist/aos.css';  // Importa los estilos de AOS en el layout global
+import AOS from 'aos';
+---
+
+<script>
+  import AOS from 'aos';
+  AOS.init();
+</script>
+
+Se crea un fichero en src/types/aos.d.ts y se agrega:
+
+declare module 'aos';
+
+
+```
+

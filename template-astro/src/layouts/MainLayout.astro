@@ -5,6 +5,8 @@ import ClientRouter from 'astro/components/ClientRouter.astro';
 import type { SupportedLang } from '../i18n/utils';
 import Footer from "../components/footer/Footer.astro";
 
+import 'aos/dist/aos.css';  // Importa los estilos de AOS en el layout global
+import AOS from 'aos';
 
 interface Props {
     title: string;
@@ -70,6 +72,11 @@ const {title, lang} = Astro.props;
     <slot />
 
     <Footer />
+
+    <script>
+      import AOS from 'aos';
+      AOS.init();
+    </script>
     
   </body>
 </html>
