@@ -3,7 +3,9 @@
     "lang_es": "Español",
     "lang_en": "English",
     "brand": "MiSitio",
-    "about": "Sobre mí",
+    "home": "Inicio",
+    "about": "Nosotros",
+    "menu": "Menú",
     "contact": "Contacto"
   },
   "home": {

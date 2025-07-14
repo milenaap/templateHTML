@@ -51,7 +51,9 @@ const t = useTranslations(lang);
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
+      <a href={`/${lang}/`} class="text-sm/6 font-semibold text-primary">{t("navbar.home")}</a>
       <a href={`/${lang}/about`} class="text-sm/6 font-semibold text-primary">{t("navbar.about")}</a>
+      <a href={`/${lang}/menu`} class="text-sm/6 font-semibold text-primary">{t("navbar.menu")}</a>
       <a href={`/${lang}/contact`} class="text-sm/6 font-semibold text-primary">{t("navbar.contact")}</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">

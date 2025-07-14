@@ -3,7 +3,9 @@
     "lang_es": "Español",
     "lang_en": "English",
     "brand": "MySite",
+    "home": "Home",
     "about": "About",
+    "menu": "Menu",
     "contact": "Contact"
   },
   "home": {
