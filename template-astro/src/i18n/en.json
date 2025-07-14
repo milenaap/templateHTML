@@ -62,6 +62,13 @@
       "button": "Subscribe"
     },
     "copyright": "All rights reserved."
+  },
+
+
+  "menu": {
+    "title": "Home",
+    "heading": "Welcome",
+    "description": "This is the English version."
   }
   
 }

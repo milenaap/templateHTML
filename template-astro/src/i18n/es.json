@@ -62,5 +62,11 @@
       "button": "Suscribirse"
     },
     "copyright": "Todos los derechos reservados."
+  },
+
+  "menu": {
+    "title": "Menú",
+    "heading": "Bienvenido",
+    "description": "Esta es la versión en español."
   }
 }
