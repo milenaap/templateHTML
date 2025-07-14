@@ -11,19 +11,6 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<!-- <nav class="bg-white shadow-md px-4 py-3 flex items-center justify-between">
-  <a href={`/${lang}`} class="text-xl font-bold text-gray-800">{t("navbar.brand")}</a>
-
-  <ul class="flex gap-6 text-gray-600 font-medium items-center">
-    <li><a href={`/${lang}/about`} class="hover:text-black">{t("navbar.about")}</a></li>
-    <li><a href={`/${lang}/contact`} class="hover:text-black">{t("navbar.contact")}</a></li>
-
-    <li>
-      <LangSelector lang={lang} client:load />
-    </li>
-  </ul>
-</nav> -->
-
 
 <header class="absolute inset-x-0 top-0 z-50">
   <nav
@@ -31,12 +18,12 @@ const t = useTranslations(lang);
     aria-label="Global"
   >
     <div class="flex lg:flex-1">
-      <a href="/" class="-m-1.5 p-1.5">
+      <a href="/" class="-m-1.5">
         <span class="sr-only">Your Company</span>
         <img
-          class="h-8 w-auto"
-          src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-          alt=""
+          class="w-20 h-auto"
+          src="/images/logo_3.png"
+          alt="logo"
         />
       </a>
     </div>
