@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -17,5 +17,17 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react()]
+  integrations: [react()],
+
+  //Variables Entorno
+  env: {
+    schema: {
+      SITE_NAME: envField.string({ 
+        context: "client", 
+        access: "public", 
+        optional: true, 
+        default: "WebSite",
+      }),
+    }
+  }
 });

@@ -1,17 +1,26 @@
 ---
 import { getStaticPaths, getI18nProps } from '../../i18n/helperi18n';
-
 export { getStaticPaths };
+import { SITE_NAME } from 'astro:env/client';
 
 const { t } = getI18nProps(Astro.params, 'footer');
 
 const year = new Date().getFullYear();
-const company = import.meta.env.PUBLIC_COMPANY_NAME;
+
+
+
+const company = import.meta.env.SITE_NAME;
+
+
+
+
 
 
 console.log(Object.keys(import.meta.env));
 
-console.log(company);
+console.log("SITE_NAME: ", SITE_NAME);
+
+
 
 
 
