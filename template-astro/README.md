@@ -189,3 +189,18 @@ npx astro add react
 
 
 ```
+
+
+
+## Map 
+
+Instalar Leaflet.
+
+```sh
+
+npm install leaflet
+
+Crear componente react y llamarlo luego
+
+
+```
