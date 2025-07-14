@@ -5,6 +5,16 @@ export { getStaticPaths };
 
 const { t } = getI18nProps(Astro.params, 'footer');
 
+const year = new Date().getFullYear();
+const company = import.meta.env.PUBLIC_COMPANY_NAME;
+
+
+console.log(Object.keys(import.meta.env));
+
+console.log(company);
+
+
+
 ---
 
 
@@ -82,7 +92,9 @@ const { t } = getI18nProps(Astro.params, 'footer');
         <a href="#" class="text-footer-text hover:text-footer-hover"><span class="sr-only">GitHub</span></a>
         <a href="#" class="text-footer-text hover:text-footer-hover"><span class="sr-only">YouTube</span></a>
       </div>
-      <p class="mt-8 text-sm/6 text-footer-text md:order-1 md:mt-0">&copy; 2024 Your Company. {t('footer.copyright')}</p>
+      <p class="mt-8 text-sm/6 text-footer-text md:order-1 md:mt-0">
+        &copy; {year} {company}. {t('footer.copyright')}
+    </p>
     </div>
   </div>
 </footer>
