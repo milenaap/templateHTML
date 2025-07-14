@@ -15,10 +15,12 @@ const { lang, t, title } = getI18nProps(Astro.params, 'map');
 
 <MainLayout title={title} lang={lang}>
 
-    <h2 class="text-3xl font-bold mb-6">Ubicación</h2>
+    <div class="section mb-10">
 
+        <h2 class="text-3xl font-bold mb-6">Ubicación</h2>
 
-    <MapComponent client:only="react" />
+        <MapComponent client:only="react" />
 
+    </div>
 
 </MainLayout>

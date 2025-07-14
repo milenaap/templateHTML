@@ -9,5 +9,5 @@ export default function Map(){
     L.marker([41.3851, 2.1734]).addTo(map).bindPopup("¡Hola!").openPopup();
   }, []);
 
-  return <div id="map" className="h-[450px] w-full rounded-xl shadow-md"></div>;
+  return <div id="map" className="h-[450px] w-full shadow-md"></div>;
 }
