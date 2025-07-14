@@ -37,7 +37,18 @@
 
     --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
     --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-    }
+
+
+    /* Footer Colors */
+    --color-footer-background: #222831;
+    --color-footer-text: #9CA3AF;
+    --color-footer-hover: #ffffff;
+    --color-footer-border: rgba(255, 255, 255, 0.1);
+    --color-footer-input-bg: rgba(255, 255, 255, 0.05);
+    --color-footer-input-outline: #4B5563; /* gray-700 */
+    --color-footer-input-focus: #0998FC; /* secondary */
+
+}
 
 @layer components {
     .btn {

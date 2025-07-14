@@ -21,9 +21,41 @@
     "heading": "Get in Touch",
     "description": "You can reach us through the form..."
   },
-  "space": {
-    "title": "Contact",
-    "heading": "Get in Touch",
-    "description": "You can reach us through the form..."
+  "footer": {
+    "solutions": "Solutions",
+    "solutions_list": {
+      "marketing": "Marketing",
+      "analytics": "Analytics",
+      "automation": "Automation",
+      "commerce": "Commerce",
+      "insights": "Insights"
+    },
+    "support": "Support",
+    "support_list": {
+      "submit_ticket": "Submit ticket",
+      "documentation": "Documentation",
+      "guides": "Guides"
+    },
+    "company": "Company",
+    "company_list": {
+      "about": "About",
+      "blog": "Blog",
+      "jobs": "Jobs",
+      "press": "Press"
+    },
+    "legal": "Legal",
+    "legal_list": {
+      "terms_of_service": "Terms of service",
+      "privacy_policy": "Privacy policy",
+      "license": "License"
+    },
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "The latest news, articles, and resources, sent to your inbox weekly.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "copyright": "All rights reserved."
   }
+  
 }

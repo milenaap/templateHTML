@@ -21,9 +21,40 @@
     "heading": "Ponte en contacto",
     "description": "Puedes escribirnos a través del formulario..."
   },
-  "space": {
-    "title": "Contacto",
-    "heading": "Ponte en contacto",
-    "description": "Puedes escribirnos a través del formulario..."
+  "footer": {
+    "solutions": "Soluciones",
+    "solutions_list": {
+      "marketing": "Marketing",
+      "analytics": "Analítica",
+      "automation": "Automatización",
+      "commerce": "Comercio",
+      "insights": "Información"
+    },
+    "support": "Soporte",
+    "support_list": {
+      "submit_ticket": "Enviar ticket",
+      "documentation": "Documentación",
+      "guides": "Guías"
+    },
+    "company": "Compañía",
+    "company_list": {
+      "about": "Sobre nosotros",
+      "blog": "Blog",
+      "jobs": "Trabajos",
+      "press": "Prensa"
+    },
+    "legal": "Legal",
+    "legal_list": {
+      "terms_of_service": "Términos de servicio",
+      "privacy_policy": "Política de privacidad",
+      "license": "Licencia"
+    },
+    "newsletter": {
+      "title": "Suscríbete a nuestro boletín",
+      "description": "Las últimas noticias, artículos y recursos directamente a tu correo semanalmente.",
+      "placeholder": "Introduce tu correo electrónico",
+      "button": "Suscribirse"
+    },
+    "copyright": "Todos los derechos reservados."
   }
 }
