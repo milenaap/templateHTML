@@ -16,7 +16,11 @@
   "about": {
     "title": "Sobre Nosotros",
     "heading": "Acerca de nuestra empresa",
-    "description": "Somos una empresa dedicada a..."
+    "description": "Somos una empresa dedicada a...",
+    "title1": "Sabores que nos definen",
+    "txt1": "En La Meva Llar celebramos la esencia de la cocina mediterránea con recetas de toda la vida, elaboradas con productos frescos y locales.",
+    "title2": "Un lugar para compartir",
+    "txt2": "Nuestro espacio está pensado para reunir personas, celebrar momentos y saborear juntos cada plato."
   },
   "contact": {
     "title": "Contacto",

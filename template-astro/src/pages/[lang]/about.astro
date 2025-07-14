@@ -10,26 +10,63 @@ const { lang, t, title } = getI18nProps(Astro.params, 'about');
 
 <MainLayout title={title} lang={lang}>
 
-  <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <p class="text-base/7 font-semibold text-secondary">
-          {t('about.heading')}
-        </p>
-        <h2
-          class="mt-2 text-5xl font-semibold tracking-tight text-primary sm:text-7xl"
+ <!-- Nosotros Section -->
+  <section class="section" id="nosotros">
+    <div class="container mx-auto px-6 py-16">
+      <!-- Fila 1 -->
+      <div class="about-row flex flex-wrap items-center justify-between mb-16">
+        <div
+          class="about-text w-full md:w-1/2"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
         >
-          {t('about.description')}
-        </h2>
-        <p
-          class="mt-8 text-lg font-medium text-pretty text-neutral-light sm:text-xl/8"
+          <h2 class="text-3xl font-semibold text-primary" data-i18n="about_title1">
+            {t('about.title1')}
+          </h2>
+          <p class="mt-4 text-lg text-neutral-light" data-i18n="about_txt1">
+            {t('about.txt1')}
+          </p>
+        </div>
+        <div
+          class="about-img w-full md:w-1/2 mt-8 md:mt-0"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-out"
         >
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-          lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-          fugiat.
-        </p>
+          <img src="/images/plato1.jpg" alt="Plato mediterráneo" class="w-full h-auto" />
+        </div>
+      </div>
+
+      <!-- Fila 2 (zigzag) -->
+      <div class="about-row flex flex-wrap items-center justify-between mb-16 reverse">
+        <div
+          class="about-text w-full md:w-1/2"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+        >
+          <h2 class="text-3xl font-semibold text-primary" data-i18n="about_title2">
+            {t('about.title2')}
+          </h2>
+          <p class="mt-4 text-lg text-neutral-light" data-i18n="about_txt2">
+            {t('about.txt2')}
+          </p>
+        </div>
+        <div
+          class="about-img w-full md:w-1/2 mt-8 md:mt-0"
+          data-aos="fade-right"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-out"
+        >
+          <img src="/images/restaurante.jpg" alt="Interior del restaurante" class="w-full h-auto" />
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
 </MainLayout>
