@@ -6,7 +6,8 @@
     "home": "Home",
     "about": "About",
     "menu": "Menu",
-    "contact": "Contact"
+    "contact": "Contact",
+    "login": "Login"
   },
   "home": {
     "title": "Home",
@@ -63,8 +64,6 @@
     },
     "copyright": "All rights reserved."
   },
-
-
   "menu": {
     "title": "Home",
     "heading": "Welcome",
