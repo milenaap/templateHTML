@@ -3,13 +3,14 @@ import { useTranslations } from '../../i18n/utils';
 
 
 /**
- * @param {{ lang: string }}
+ * @param {{ lang: string, options: { code: string, label: string }[ }}
  */
-export default function LangSelector({ lang }) {
+export default function LangSelector({ lang, options }) {
 
-    const t = useTranslations(lang);
+  const t = useTranslations(lang);
 
   const handleChange = (e) => {
+    e.preventDefault();
     const newLang = e.target.value;
     const path = window.location.pathname.split('/').slice(2).join('/');
     window.location.pathname = `/${newLang}/${path}`;
@@ -17,12 +18,13 @@ export default function LangSelector({ lang }) {
 
   return (
     <select
-      className="border rounded px-2 py-1 text-sm text-gray-700"
+      className="border rounded px-2 py-1 text-sm text-primary"
       onChange={handleChange}
       defaultValue={lang}
     >
-      <option value="es">{t('navbar.lang_es')}</option>
-      <option value="en">{t('navbar.lang_en')}</option>
+      {options.map((opt) => (
+        <option key={opt.code} value={opt.code}>{opt.label}</option>
+      ))}
     </select>
   );
 }

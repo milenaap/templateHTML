@@ -12,6 +12,14 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const company = SITE_NAME;
+
+const options = [
+  { code: 'es', label: t('navbar.lang_es') },
+  { code: 'en', label: t('navbar.lang_en') }
+];
+
+
+
 ---
 
 <header class="absolute inset-x-0 top-0 z-[9999]" x-data="{ open: false }">
@@ -42,7 +50,7 @@ const company = SITE_NAME;
 
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <div class="mr-5">
-        <LangSelector lang={lang} client:load />
+        <LangSelector lang={lang} options={options} client:load />
       </div>
       <a href="#" class="text-sm font-semibold text-primary">{t("navbar.login")} &rarr;</a>
     </div>
@@ -80,7 +88,7 @@ const company = SITE_NAME;
       <a href={`/${lang}/contact`} class="block text-base font-semibold text-primary hover:bg-gray-800 p-2 rounded">{t("navbar.contact")}</a>
       <a href={`/${lang}/map`} class="block text-base font-semibold text-primary hover:bg-gray-800 p-2 rounded">{t("navbar.map")}</a>
       <div class="pt-4">
-        <LangSelector lang={lang} client:load />
+        <LangSelector lang={lang} options={options} client:load />
       </div>
       <a href="#" class="block text-base font-semibold text-primary hover:bg-gray-800 p-2 rounded">{t("navbar.login")}</a>
     </div>
