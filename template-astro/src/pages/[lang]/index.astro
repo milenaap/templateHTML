@@ -1,8 +1,6 @@
 ---
 import Navbar from '../../components/navbar/Navbar.astro';
-
 import { getStaticPaths, getI18nProps } from '../../i18n/helperi18n';
-
 import MainLayout from '../../layouts/MainLayout.astro';
 
 export { getStaticPaths };
@@ -58,7 +56,7 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
             <div
               class="relative rounded-full px-3 py-1 text-sm/6 text-primary ring-1 ring-white/10 hover:ring-white/20"
             >
@@ -68,7 +66,7 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
                 more <span aria-hidden="true">&rarr;</span></a
               >
             </div>
-          </div>
+          </div> -->
           <div class="text-center">
             <h1
               class="text-5xl font-semibold tracking-tight text-balance text-primary sm:text-7xl"
@@ -126,9 +124,5 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
 
   </div>
 
-
-  <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">{t('home.heading')}</h1>
-
-  <p class="text-lg text-primary-dark leading-relaxed max-w-2xl">{t('home.description')}</p>
 
 </MainLayout>
