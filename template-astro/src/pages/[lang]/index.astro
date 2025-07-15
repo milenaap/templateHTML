@@ -21,16 +21,16 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
     <Navbar lang={lang} />
 
     <div class="relative isolate overflow-hidden pt-14">
-      <!-- <img
-        src="./img/hero.png"
+      <img
+        src="/images/hero.jpg"
         alt="img"
         class="absolute inset-0 -z-10 size-full object-cover"
-      /> -->
+      />
       <div
         class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
       >
-        <div
+        <!-- <div
           class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
           style="
             clip-path: polygon(
@@ -52,21 +52,10 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
               74.1% 44.1%
             );
           "
-        ></div>
+        ></div> -->
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div
-              class="relative rounded-full px-3 py-1 text-sm/6 text-primary ring-1 ring-white/10 hover:ring-white/20"
-            >
-              Announcing our next round of funding.
-              <a href="#" class="font-semibold text-white"
-                ><span class="absolute inset-0" aria-hidden="true"></span>Read
-                more <span aria-hidden="true">&rarr;</span></a
-              >
-            </div>
-          </div> -->
           <div class="text-center">
             <h1
               class="text-5xl font-semibold tracking-tight text-balance text-primary sm:text-7xl"
@@ -96,7 +85,7 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
         class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"
       >
-        <div
+        <!-- <div
           class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-288.75"
           style="
             clip-path: polygon(
@@ -118,7 +107,7 @@ const { lang, t, title } = getI18nProps(Astro.params, 'home');
               74.1% 44.1%
             );
           "
-        ></div>
+        ></div> -->
       </div>
     </div>
 
