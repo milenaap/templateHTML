@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getStaticPaths, getI18nProps } from "../../i18n/helperi18n";
+import MenuComponent from "../../components/menu/MenuComponent.astro";
 
 export { getStaticPaths };
 
@@ -8,7 +9,8 @@ const { lang, t, title } = getI18nProps(Astro.params, "menu");
 ---
 
 <MainLayout title={title} lang={lang}>
-    <div class="section">
+    <!-- <div class="section">
+
         <div class="bg-gray-900 py-24 sm:py-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <dl
@@ -55,5 +57,7 @@ const { lang, t, title } = getI18nProps(Astro.params, "menu");
         <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">
             {t("menu.description")}
         </p>
-    </div>
+    </div> -->
+
+    <MenuComponent />
 </MainLayout>

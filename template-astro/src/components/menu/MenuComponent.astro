@@ -1,0 +1,35 @@
+---
+
+import { getStaticPaths, getI18nProps } from "../../i18n/helperi18n";
+
+export { getStaticPaths };
+
+const { lang, t, title } = getI18nProps(Astro.params, "menu");
+---
+
+
+  <section class="section light" id="menu">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center" data-i18n="menu_title">{t("menu.title")}</h2>
+
+      <!-- Swiper -->
+      <div class="swiper-container menuSwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Página 1 -->
+          <div class="swiper-slide">
+            <img src="/images/carta1.jpg" alt="Carta 1" class="w-full object-cover"/>
+          </div>
+
+        </div>
+
+        <!-- Flechas -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Paginación opcional -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+

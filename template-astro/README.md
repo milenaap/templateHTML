@@ -233,3 +233,15 @@ declare module 'aos';
 
 ```
 
+## Swiper
+
+Instalar swiper para el componente menu
+
+```sh
+
+npm install swiper
+
+Crear componente menu 
+
+
+```
