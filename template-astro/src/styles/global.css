@@ -31,6 +31,15 @@
     --color-neutral-light: #9CA3AF;
     --color-neutral: #6B7280;
     --color-neutral-dark: #374151;
+
+    --color-black: #000000;
+    --color-black-light: rgba(0, 0, 0, 0.6);
+    --color-black-dark: #000000;
+
+    --color-white: #ffffff;
+    --color-white-light: rgba(255, 255, 255, 0.4);
+    --color-white-dark: #f0f0f0;
+
     
     --color-navbar: #222831;
     --color-background: #f8fafc;
