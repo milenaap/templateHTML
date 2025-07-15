@@ -116,4 +116,8 @@
     .section {
         padding-top: 10rem;
     }
+
+    [x-cloak] {
+        display: none !important;
+    }
 }

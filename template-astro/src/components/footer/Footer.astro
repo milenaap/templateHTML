@@ -71,9 +71,15 @@ const company = SITE_NAME;
         <p class="mt-2 text-sm/6 text-footer-text">{t('footer.newsletter.description')}</p>
         <form class="mt-6 sm:flex sm:max-w-md">
           <label for="email-address" class="sr-only">{t('footer.newsletter.placeholder')}</label>
-          <input type="email" id="email-address" name="email-address" autocomplete="email" required
+          <input
+            type="email"
+            id="email-address"
+            name="email-address"
+            autocomplete="email"
+            required
             class="w-full rounded-md bg-footer-input-bg px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-footer-input-outline placeholder:text-footer-text focus:outline-2 focus:outline-footer-input-focus sm:w-64 sm:text-sm/6 xl:w-full"
-            :placeholder="t('footer.newsletter.placeholder')" />
+            placeholder={t('footer.newsletter.placeholder')}
+          />
           <div class="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
             <button type="submit" class="btn btn-primary">
               {t('footer.newsletter.button')}
