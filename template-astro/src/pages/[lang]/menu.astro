@@ -1,7 +1,8 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getStaticPaths, getI18nProps } from "../../i18n/helperi18n";
-import MenuComponent from "../../components/menu/MenuComponent.astro";
+import { MenuComponent } from "../../components/menu/MenuComponent";
+
 
 export { getStaticPaths };
 
@@ -10,7 +11,9 @@ console.log({ lang, t, title });
 ---
 
 <MainLayout title={title} lang={lang}>
+    <div class="section p-10">
+       <MenuComponent client:load />
 
-    <MenuComponent />
-    
+    </div>
+
 </MainLayout>
