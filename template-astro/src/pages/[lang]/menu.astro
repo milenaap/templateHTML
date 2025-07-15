@@ -11,9 +11,12 @@ console.log({ lang, t, title });
 ---
 
 <MainLayout title={title} lang={lang}>
-    <div class="section p-10">
-       <MenuComponent client:load />
+    <div class="section my-10 max-w-4xl mx-auto px-4">
+         <div class="relative p-10 overflow-hidden shadow-lg t-10">
+            <MenuComponent client:load />
 
+        </div>
     </div>
+   
 
 </MainLayout>
