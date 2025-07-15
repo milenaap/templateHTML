@@ -69,5 +69,12 @@
     "title": "Menú",
     "heading": "Bienvenido",
     "description": "Esta es la versión en español."
+  },
+   "location": {
+    "title": "Ubicación y Horarios",
+    "address": "📍 Calle Buenos Aires, 12 – Barcelona",
+    "hours": "🕒 Lunes a Domingo: 9:00 - 23:00",
+    "phone": "📞 +34 600 123 456",
+    "note": "* Horarios especiales en festivos"
   }
 }

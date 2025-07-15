@@ -1,5 +1,4 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
 import { getStaticPaths, getI18nProps } from '../../i18n/helperi18n';
 
 export { getStaticPaths };
@@ -10,27 +9,27 @@ interface Props {
 
 const { lang, t, title } = getI18nProps(Astro.params, 'contact');
 ---
+
+
+
 <div class="section">
-<div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <p class="text-base/7 font-semibold text-secondary">
-          {t('contact.heading')}
-        </p>
-        <h2
-          class="mt-2 text-5xl font-semibold tracking-tight text-primary sm:text-7xl"
-        >
-          {t('contact.description')}
-        </h2>
-        <p
-          class="mt-8 text-lg font-medium text-pretty text-neutral-light sm:text-xl/8"
-        >
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-          lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-          fugiat.
-        </p>
-      </div>
+  <section
+    id="location"
+    class="relative bg-fixed bg-center bg-cover bg-no-repeat"
+    style="background-image: url('/images/location.jpg');"
+  >
+    <!-- Overlay oscura -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-6 text-center text-white">
+      <h2 class="text-4xl font-bold sm:text-5xl">{t('location.title')}</h2>
+      <p class="mt-4 text-lg sm:text-xl">{t('location.address')}</p>
+      <p class="mt-2 text-lg sm:text-xl">{t('location.hours')}</p>
+      <p class="mt-2 text-lg sm:text-xl">{t('location.phone')}</p>
+      <p class="mt-2 text-base italic opacity-80">{t('location.note')}</p>
     </div>
-  </div>
+  </section>
 </div>
- 
+
+

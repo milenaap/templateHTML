@@ -69,6 +69,13 @@
     "title": "Home",
     "heading": "Welcome",
     "description": "This is the English version."
+  },
+   "location": {
+    "title": "Location & Hours",
+    "address": "📍 Buenos Aires Street, 12 – Barcelona",
+    "hours": "🕒 Monday to Sunday: 9:00 AM - 11:00 PM",
+    "phone": "📞 +34 600 123 456",
+    "note": "* Special schedules on holidays"
   }
   
 }
