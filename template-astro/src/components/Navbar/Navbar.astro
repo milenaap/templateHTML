@@ -41,18 +41,18 @@ const options = [
     </div>
 
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href={`/${lang}/`} class="text-sm font-semibold text-primary">{t("navbar.home")}</a>
-      <a href={`/${lang}/about`} class="text-sm font-semibold text-primary">{t("navbar.about")}</a>
-      <a href={`/${lang}/menu`} class="text-sm font-semibold text-primary">{t("navbar.menu")}</a>
-      <a href={`/${lang}/contact`} class="text-sm font-semibold text-primary">{t("navbar.contact")}</a>
-      <a href={`/${lang}/map`} class="text-sm font-semibold text-primary">{t("navbar.map")}</a>
+      <a href={`/${lang}/`} class="text-xl font-semibold text-primary">{t("navbar.home")}</a>
+      <a href={`/${lang}/about`} class="text-xl font-semibold text-primary">{t("navbar.about")}</a>
+      <a href={`/${lang}/menu`} class="text-xl font-semibold text-primary">{t("navbar.menu")}</a>
+      <a href={`/${lang}/contact`} class="text-xl font-semibold text-primary">{t("navbar.contact")}</a>
+      <a href={`/${lang}/map`} class="text-xl font-semibold text-primary">{t("navbar.map")}</a>
     </div>
 
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <div class="mr-5">
         <LangSelector lang={lang} options={options} client:load />
       </div>
-      <a href="#" class="text-sm font-semibold text-primary">{t("navbar.login")} &rarr;</a>
+      <a href="#" class="text-xl font-semibold text-primary">{t("navbar.login")} &rarr;</a>
     </div>
   </nav>
 
