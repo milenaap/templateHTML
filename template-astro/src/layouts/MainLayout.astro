@@ -13,19 +13,6 @@ interface Props {
     lang: SupportedLang;
 }
 
-
-// 👇 Esta es la parte nueva que necesitas
-// export async function getStaticPaths() {
-//   return [
-//     { params: { lang: 'es' } },
-//     { params: { lang: 'en' } }
-//   ];
-// }
-
-// const { lang } = Astro.params;
-// const t = useTranslations(lang as 'es');
-
-
 const {title, lang} = Astro.props;
 
 
@@ -71,7 +58,7 @@ const {title, lang} = Astro.props;
 
     <slot />
 
-    <Footer />
+    <Footer lang={lang} />
 
     <script>
       import AOS from 'aos';
