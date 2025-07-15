@@ -117,7 +117,10 @@
         padding-top: 10rem;
     }
 
+
+    /* Only by Navbar */
     [x-cloak] {
         display: none !important;
     }
+
 }
