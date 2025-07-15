@@ -18,7 +18,7 @@ export default function LangSelector({ lang, options }) {
 
   return (
     <select
-      className="border rounded px-2 py-1 text-sm text-primary"
+      className="border rounded px-2 py-1 text-sm text-white"
       onChange={handleChange}
       defaultValue={lang}
     >
